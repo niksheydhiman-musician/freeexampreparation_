@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Exam Pages — Integration Reference | FreeExamPrep</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Nunito',sans-serif;} .font-display{font-family:'Playfair Display',serif;} code{font-family:monospace;background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:0.85em;}</style>
+</head>
+<body class="bg-slate-50 text-slate-700 min-h-screen p-8 max-w-4xl mx-auto">
+
+  <h1 class="text-3xl font-bold text-slate-900 mb-2 font-display">New Exam Pages — Integration Reference</h1>
+  <p class="text-slate-500 mb-8">All 8 new design exams. 16 new HTML files total (1 mock + 1 PYQ each). Place all files in the same root folder as your existing pages.</p>
+
+  <!-- FILE LIST -->
+  <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-8">
+    <h2 class="text-lg font-bold text-slate-900 mb-4">📁 New Files (16 total)</h2>
+    <div class="grid md:grid-cols-2 gap-2 text-sm">
+      <div class="space-y-1">
+        <p class="font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">Mock Tests</p>
+        <p><code>ceed-design-thinking-creativity-mock.html</code></p>
+        <p><code>fddi-aist-footwear-design-mock.html</code></p>
+        <p><code>cuet-ug-design-aptitude-mock.html</code></p>
+        <p><code>mitid-dat-design-aptitude-mock.html</code></p>
+        <p><code>seed-symbiosis-design-mock.html</code></p>
+        <p><code>pearl-academy-design-aptitude-mock.html</code></p>
+        <p><code>smeat-srishti-design-aptitude-mock.html</code></p>
+        <p><code>uid-dat-design-aptitude-mock.html</code></p>
+      </div>
+      <div class="space-y-1">
+        <p class="font-semibold text-slate-500 text-xs uppercase tracking-wider mb-2">PYQ Pages</p>
+        <p><code>ceed-design-thinking-creativity-pyq.html</code></p>
+        <p><code>fddi-aist-footwear-design-pyq.html</code></p>
+        <p><code>cuet-ug-design-aptitude-pyq.html</code></p>
+        <p><code>mitid-dat-design-aptitude-pyq.html</code></p>
+        <p><code>seed-symbiosis-design-pyq.html</code></p>
+        <p><code>pearl-academy-design-aptitude-pyq.html</code></p>
+        <p><code>smeat-srishti-design-aptitude-pyq.html</code></p>
+        <p><code>uid-dat-design-aptitude-pyq.html</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN-ARCHITECTURE-HUB INTEGRATION -->
+  <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm mb-8">
+    <h2 class="text-lg font-bold text-slate-900 mb-2">🔗 Add to <code>design-architecture-hub.html</code></h2>
+    <p class="text-sm text-slate-500 mb-4">Paste the cards below into both the <strong>Mock Tests</strong> section (<code>id="mock-tests"</code>) and the <strong>PYQ Papers</strong> section (<code>id="pyq-papers"</code>) of your hub page. Same pattern as existing cards.</p>
+
+    <div class="space-y-4">
+
+      <div>
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">National & Government Exams</p>
+        <pre class="bg-slate-900 text-teal-300 text-xs rounded-xl p-4 overflow-x-auto whitespace-pre-wrap"><!-- CEED -->
+&lt;a href="ceed-design-thinking-creativity-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;IIT/IISc PG Design&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;CEED — Design Thinking &amp; Creativity&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;M.Des/Ph.D gateway for IITs and IISc Bangalore&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;
+
+<!-- FDDI AIST -->
+&lt;a href="fddi-aist-footwear-design-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;National Importance&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;FDDI AIST — Footwear Design &amp; Leather Goods&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;All India Selection Test for FDDI campuses&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;
+
+<!-- CUET UG -->
+&lt;a href="cuet-ug-design-aptitude-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;Central Universities&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;CUET UG — Design Aptitude&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;Accepted by BHU, DU and major universities for B.Des/BFA&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;</pre>
+      </div>
+
+      <div>
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Private & Institutional Exams</p>
+        <pre class="bg-slate-900 text-teal-300 text-xs rounded-xl p-4 overflow-x-auto whitespace-pre-wrap"><!-- MITID DAT -->
+&lt;a href="mitid-dat-design-aptitude-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;MIT Pune&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;MITID DAT — Design Aptitude&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;MIT Institute of Design, Pune — industrial &amp; automotive design&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;
+
+<!-- SEED -->
+&lt;a href="seed-symbiosis-design-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;Symbiosis SID&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;SEED — Communication &amp; UX Design&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;Symbiosis Institute of Design — communication, fashion &amp; UX&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;
+
+<!-- Pearl Academy -->
+&lt;a href="pearl-academy-design-aptitude-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;Pearl Academy&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;Pearl Academy — Creative Aptitude&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;Delhi, Mumbai, Jaipur &amp; Bengaluru campuses&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;
+
+<!-- SMEAT -->
+&lt;a href="smeat-srishti-design-aptitude-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;Srishti Manipal&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;SMEAT — Experimental &amp; Digital Design&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;Srishti Manipal Institute of Art, Design &amp; Technology, Bengaluru&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;
+
+<!-- UID DAT -->
+&lt;a href="uid-dat-design-aptitude-mock.html" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-teal-400 transition"&gt;
+  &lt;span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded"&gt;Karnavati University&lt;/span&gt;
+  &lt;h3 class="font-bold text-slate-900 mt-2"&gt;UID DAT — Product &amp; Fashion Design&lt;/h3&gt;
+  &lt;p class="text-xs text-slate-500 mt-1"&gt;Unitedworld Institute of Design, Gandhinagar&lt;/p&gt;
+  &lt;span class="text-xs text-teal-600 font-semibold mt-2 inline-block"&gt;Mock Test →&lt;/span&gt;
+&lt;/a&gt;</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS TABLE -->
+  <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+    <h2 class="text-lg font-bold text-slate-900 mb-4">🗂️ Quick Links Table — All New Pages</h2>
+    <table class="w-full text-sm border-collapse">
+      <thead>
+        <tr class="bg-slate-50 text-left">
+          <th class="p-3 font-semibold text-slate-600 border-b border-slate-200">Exam</th>
+          <th class="p-3 font-semibold text-slate-600 border-b border-slate-200">Mock Test</th>
+          <th class="p-3 font-semibold text-slate-600 border-b border-slate-200">PYQ Page</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        <tr><td class="p-3 font-medium">CEED</td><td class="p-3"><a href="ceed-design-thinking-creativity-mock.html" class="text-teal-600 hover:underline">ceed-...-mock.html</a></td><td class="p-3"><a href="ceed-design-thinking-creativity-pyq.html" class="text-teal-600 hover:underline">ceed-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">FDDI AIST</td><td class="p-3"><a href="fddi-aist-footwear-design-mock.html" class="text-teal-600 hover:underline">fddi-...-mock.html</a></td><td class="p-3"><a href="fddi-aist-footwear-design-pyq.html" class="text-teal-600 hover:underline">fddi-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">CUET UG</td><td class="p-3"><a href="cuet-ug-design-aptitude-mock.html" class="text-teal-600 hover:underline">cuet-...-mock.html</a></td><td class="p-3"><a href="cuet-ug-design-aptitude-pyq.html" class="text-teal-600 hover:underline">cuet-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">MITID DAT</td><td class="p-3"><a href="mitid-dat-design-aptitude-mock.html" class="text-teal-600 hover:underline">mitid-...-mock.html</a></td><td class="p-3"><a href="mitid-dat-design-aptitude-pyq.html" class="text-teal-600 hover:underline">mitid-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">SEED</td><td class="p-3"><a href="seed-symbiosis-design-mock.html" class="text-teal-600 hover:underline">seed-...-mock.html</a></td><td class="p-3"><a href="seed-symbiosis-design-pyq.html" class="text-teal-600 hover:underline">seed-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">Pearl Academy</td><td class="p-3"><a href="pearl-academy-design-aptitude-mock.html" class="text-teal-600 hover:underline">pearl-...-mock.html</a></td><td class="p-3"><a href="pearl-academy-design-aptitude-pyq.html" class="text-teal-600 hover:underline">pearl-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">SMEAT</td><td class="p-3"><a href="smeat-srishti-design-aptitude-mock.html" class="text-teal-600 hover:underline">smeat-...-mock.html</a></td><td class="p-3"><a href="smeat-srishti-design-aptitude-pyq.html" class="text-teal-600 hover:underline">smeat-...-pyq.html</a></td></tr>
+        <tr><td class="p-3 font-medium">UID DAT</td><td class="p-3"><a href="uid-dat-design-aptitude-mock.html" class="text-teal-600 hover:underline">uid-...-mock.html</a></td><td class="p-3"><a href="uid-dat-design-aptitude-pyq.html" class="text-teal-600 hover:underline">uid-...-pyq.html</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>
