@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: your-github-username/your-repository-name # Update this with your exact GitHub repo details
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "blog"
+    label: "Exam Strategy Blogs"
+    folder: "blog" # This saves articles directly into your blog/ folder
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Exam Category", name: "category", widget: "select", options: ["NIFT", "NID", "UCEED", "NATA"] }
+      - { label: "Excerpt Description", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body Content", name: "body", widget: "markdown" }
