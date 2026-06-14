@@ -14,12 +14,12 @@ collections:
   - name: "blogs"
     label: "Blogs"
     label_singular: "Blog"
-    folder: "blogs"
+    folder: "blogs/posts"
     create: true
     extension: "md"
     format: "frontmatter"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: "blogs/{{slug}}"
+    slug: "{{slug}}"
+    preview_path: "blogs/index.html?slug={{slug}}"
     sortable_fields: ["date", "title", "category"]
     view_filters:
       - label: "Drafts"
