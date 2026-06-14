@@ -3,8 +3,6 @@ backend:
   repo: niksheydhiman-musician/freeexampreparation_
   branch: main
 
-local_backend: true
-
 site_url: https://freeexampreparation.com
 display_url: https://freeexampreparation.com
 logo_url: /favicon.ico
