@@ -15,7 +15,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Exam Category", name: "category", widget: "select", options: ["NIFT", "NID", "UCEED", "NATA"] }
       - { label: "Excerpt Description", name: "description", widget: "text" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body Content", name: "body", widget: "markdown" }
