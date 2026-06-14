@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Post | FreeExamPrep</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Nunito', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .prose-content h2 { font-size: 1.5rem; font-weight: 700; color: #0f172a; margin-top: 1.8rem; margin-bottom: 0.8rem; }
+    .prose-content h3 { font-size: 1.2rem; font-weight: 700; color: #1e293b; margin-top: 1.2rem; margin-bottom: 0.6rem; }
+    .prose-content p, .prose-content li { color: #334155; line-height: 1.8; }
+    .prose-content ul, .prose-content ol { padding-left: 1.2rem; margin: 0.8rem 0; }
+    .prose-content li { margin: 0.25rem 0; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 bg-slate-900 shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/index.html" class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal-500 text-slate-900 font-bold text-lg">✏️</span>
+        <span class="text-white font-display text-lg">Free<span class="text-teal-400">Exam</span>Prep</span>
+      </a>
+      <a href="/blog.html" class="text-sm font-semibold text-teal-300 hover:text-teal-200">← Back to Blog</a>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+    <div id="errorBox" class="hidden mb-6 rounded-xl border border-rose-200 bg-rose-50 text-rose-700 px-4 py-3 text-sm"></div>
+
+    <article class="bg-white border border-slate-100 rounded-2xl shadow-sm p-6 sm:p-8">
+      <p id="meta" class="text-xs font-mono text-slate-400 mb-2"></p>
+      <h1 id="title" class="font-display text-3xl sm:text-4xl font-bold text-slate-900 leading-tight mb-6">Loading...</h1>
+      <div id="content" class="prose-content"></div>
+    </article>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs py-6 mt-8">
+    <div class="max-w-5xl mx-auto px-4">© 2026 FreeExamPreparation.com</div>
+  </footer>
+
+  <script type="module">
+    import { marked } from 'https://cdn.jsdelivr.net/npm/marked@13.0.2/lib/marked.esm.js';
+    import DOMPurify from 'https://cdn.jsdelivr.net/npm/dompurify@3.1.6/+esm';
+
+    const titleEl = document.getElementById('title');
+    const metaEl = document.getElementById('meta');
+    const contentEl = document.getElementById('content');
+    const errorEl = document.getElementById('errorBox');
+
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
+
+    function showError(message) {
+      errorEl.textContent = message;
+      errorEl.classList.remove('hidden');
+      titleEl.textContent = 'Unable to load this blog post';
+      metaEl.textContent = '';
+      contentEl.innerHTML = '';
+    }
+
+    if (!slug || !/^[a-z0-9-]+$/i.test(slug) || slug.includes('..') || slug.includes('/')) {
+      showError('Invalid or missing blog post slug.');
+    } else {
+      fetch(`./posts/${slug}.md`, { cache: 'default' })
+        .then((response) => {
+          if (!response.ok) throw new Error('Post not found');
+          return response.text();
+        })
+        .then((raw) => {
+          let markdownBody = raw;
+          let frontmatter = {};
+
+          const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+          if (match) {
+            markdownBody = match[2] || '';
+            match[1].split('\n').forEach((line) => {
+              const idx = line.indexOf(':');
+              if (idx > -1) {
+                const key = line.slice(0, idx).trim();
+                const value = line.slice(idx + 1).trim().replace(/^"|"$/g, '');
+                frontmatter[key] = value;
+              }
+            });
+          }
+
+          const title = frontmatter.title || slug.replace(/-/g, ' ');
+          const date = frontmatter.date || '';
+          const category = frontmatter.category || '';
+
+          titleEl.textContent = title;
+          metaEl.textContent = [category, date].filter(Boolean).join(' • ');
+
+          const rendered = marked.parse(markdownBody);
+          contentEl.innerHTML = DOMPurify.sanitize(rendered);
+        })
+        .catch(() => {
+          showError('This blog post is not available yet.');
+        });
+    }
+  </script>
+</body>
+</html>
