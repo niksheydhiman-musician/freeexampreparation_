@@ -1,8 +1,7 @@
-backend:
+ backend:
   name: github
-  repo: niksheydhiman-musician/freeexampreparation_
+  repo: your-username/your-repository-name
   branch: main
-  auth_type: token
 
 site_url: https://freeexampreparation.in
 display_url: https://freeexampreparation.in
