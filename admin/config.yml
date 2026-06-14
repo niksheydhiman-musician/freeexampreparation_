@@ -1,48 +1,21 @@
- backend:
+backend:
   name: github
   repo: niksheydhiman-musician/freeexampreparation_
   branch: main
 
-site_url: https://freeexampreparation.in
-display_url: https://freeexampreparation.in
-logo_url: /favicon.ico
-
-media_folder: "blogs/images"
-public_folder: "/blogs/images"
+media_folder: "assets/img"
+public_folder: "/assets/img"
 
 collections:
-  - name: "blogs"
-    label: "Blogs"
-    label_singular: "Blog"
-    folder: "blogs/posts"
+  - name: "blog"
+    label: "Exam Strategy Blogs"
+    folder: "blog"
     create: true
-    extension: "md"
-    format: "frontmatter"
     slug: "{{slug}}"
-    preview_path: "blogs/index.html?slug={{slug}}"
-    sortable_fields: ["date", "title", "category"]
-    view_filters:
-      - label: "Drafts"
-        field: "draft"
-        pattern: true
-      - label: "Published"
-        field: "draft"
-        pattern: false
     fields:
-      - { label: "Title", name: "title", widget: "string", hint: "Main blog headline" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "FreeExamPrep Team" }
-      - label: "Category"
-        name: "category"
-        widget: "select"
-        options:
-          - "Preparation Strategy"
-          - "Exam News"
-          - "Notifications"
-          - "Design & Architecture"
-          - "General"
-      - { label: "Summary", name: "summary", widget: "text", hint: "Short preview text for blog listing" }
-      - { label: "Tags", name: "tags", widget: "list", required: false, hint: "Press enter to add each tag" }
-      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true, hint: "Keep checked while drafting" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Exam Category", name: "category", widget: "select", options: ["NIFT", "NID", "UCEED", "NATA"] }
+      - { label: "Excerpt Description", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body Content", name: "body", widget: "markdown" }
