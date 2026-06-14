@@ -63,10 +63,10 @@
       contentEl.innerHTML = '';
     }
 
-    if (!slug || !/^[a-z0-9-]+$/i.test(slug)) {
+    if (!slug || !/^[a-z0-9-]+$/i.test(slug) || slug.includes('..') || slug.includes('/')) {
       showError('Invalid or missing blog post slug.');
     } else {
-      fetch(`./posts/${slug}.md`, { cache: 'no-store' })
+      fetch(`./posts/${slug}.md`, { cache: 'default' })
         .then((response) => {
           if (!response.ok) throw new Error('Post not found');
           return response.text();
