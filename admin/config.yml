@@ -31,7 +31,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "Main blog headline" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "FreeExamPrep Team", required: false }
+      - { label: "Author", name: "author", widget: "string", default: "FreeExamPrep Team" }
       - label: "Category"
         name: "category"
         widget: "select"
