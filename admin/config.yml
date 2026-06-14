@@ -32,7 +32,7 @@ collections:
         pattern: false
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "Main blog headline" }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "string", default: "FreeExamPrep Team", required: false }
       - label: "Category"
         name: "category"
