@@ -32,11 +32,39 @@
         <a href="blog" class="hover:text-teal-400 transition-colors">Blog</a>
       </nav>
       <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-teal-300 bg-teal-900/50 border border-teal-700 rounded-full px-3 py-1">✓ 100% Free</span>
-      <button class="md:hidden text-slate-300 hover:text-white" aria-label="Open menu">
+      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
   </header>
+<!-- ── MOBILE MENU ── -->
+<div id="mobile-menu" class="hidden bg-slate-800 border-t border-slate-700 md:hidden">
+  <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-semibold text-slate-300">
+    <a href="/" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Home</a>
+    <a href="design-architecture-hub" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Exam Repository</a>
+    <a href="design-architecture-hub#mock-tests" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Mock Tests</a>
+    <a href="design-architecture-hub#pyq-papers" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">PYQ Papers</a>
+    <a href="blog" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Blog</a>
+  </nav>
+</div>
+<script>
+  (function(){
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    if(btn && menu){
+      btn.addEventListener('click', function(){
+        var nowOpen = menu.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', String(nowOpen));
+      });
+      menu.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded','false');
+        });
+      });
+    }
+  })();
+</script>
 
   <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8">
     <section class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm mb-8">
