@@ -63,40 +63,114 @@
       contentEl.innerHTML = '';
     }
 
+    function renderMarkdown(raw) {
+      let markdownBody = raw;
+      let frontmatter = {};
+
+      const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+      if (match) {
+        markdownBody = match[2] || '';
+        match[1].split('\n').forEach((line) => {
+          const idx = line.indexOf(':');
+          if (idx > -1) {
+            const key = line.slice(0, idx).trim();
+            const value = line.slice(idx + 1).trim().replace(/^"|"$/g, '');
+            frontmatter[key] = value;
+          }
+        });
+      }
+
+      const title = frontmatter.title || slug.replace(/-/g, ' ');
+      const rawDate = frontmatter.date || '';
+      let date = '';
+      if (rawDate) {
+        const parsed = new Date(rawDate);
+        date = Number.isNaN(parsed.getTime()) ? rawDate : parsed.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+      }
+      const category = frontmatter.category || '';
+
+      titleEl.textContent = title;
+      document.title = title + ' | FreeExamPrep';
+      metaEl.textContent = [category, date].filter(Boolean).join(' • ');
+
+      const rendered = marked.parse(markdownBody);
+      contentEl.innerHTML = DOMPurify.sanitize(rendered);
+    }
+
+    // Strips a named top-level CSS rule (e.g. 'body' or 'html') handling nested braces
+    function stripTopLevelRule(css, selector) {
+      const re = new RegExp('\\b' + selector + '\\b\\s*\\{', 'g');
+      let result = '';
+      let lastIndex = 0;
+      let match;
+      while ((match = re.exec(css)) !== null) {
+        result += css.slice(lastIndex, match.index);
+        let depth = 1;
+        let i = match.index + match[0].length;
+        while (i < css.length && depth > 0) {
+          if (css[i] === '{') depth++;
+          else if (css[i] === '}') depth--;
+          i++;
+        }
+        lastIndex = i;
+      }
+      result += css.slice(lastIndex);
+      return result;
+    }
+
+    function renderHtml(html) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+
+      const title = doc.querySelector('meta[property="og:title"]')?.getAttribute('content')
+        || doc.querySelector('h1')?.textContent?.trim()
+        || slug.replace(/-/g, ' ');
+      const description = doc.querySelector('meta[property="og:description"]')?.getAttribute('content')
+        || doc.querySelector('meta[name="description"]')?.getAttribute('content')
+        || '';
+
+      titleEl.textContent = title;
+      document.title = title + ' | FreeExamPrep';
+      metaEl.textContent = description;
+
+      // Inject custom styles from the original post (strip body/html rules to avoid conflicts)
+      doc.querySelectorAll('style').forEach((styleEl) => {
+        const injected = document.createElement('style');
+        // Remove top-level body{} and html{} rules, accounting for multi-line and nested braces
+        let css = styleEl.textContent;
+        css = stripTopLevelRule(css, 'body');
+        css = stripTopLevelRule(css, 'html');
+        injected.textContent = css;
+        document.head.appendChild(injected);
+      });
+
+      // Extract article content from the post's <main> <article> block
+      const article = doc.querySelector('main article') || doc.querySelector('article') || doc.querySelector('main');
+      if (article) {
+        article.querySelectorAll('script').forEach((el) => el.remove());
+        contentEl.innerHTML = DOMPurify.sanitize(article.innerHTML, { ADD_ATTR: ['class', 'id', 'href', 'target'] });
+        // Ensure all _blank links include rel="noopener noreferrer" for safety
+        contentEl.querySelectorAll('a[target="_blank"]').forEach((a) => {
+          a.setAttribute('rel', 'noopener noreferrer');
+        });
+      } else {
+        showError('Could not extract content from this blog post.');
+      }
+    }
+
     if (!slug || !/^[a-z0-9-]+$/i.test(slug) || slug.includes('..') || slug.includes('/')) {
       showError('Invalid or missing blog post slug.');
     } else {
+      // Try markdown first (CMS-uploaded posts), then fall back to HTML posts
       fetch(`./posts/${slug}.md`, { cache: 'default' })
         .then((response) => {
-          if (!response.ok) throw new Error('Post not found');
-          return response.text();
-        })
-        .then((raw) => {
-          let markdownBody = raw;
-          let frontmatter = {};
-
-          const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-          if (match) {
-            markdownBody = match[2] || '';
-            match[1].split('\n').forEach((line) => {
-              const idx = line.indexOf(':');
-              if (idx > -1) {
-                const key = line.slice(0, idx).trim();
-                const value = line.slice(idx + 1).trim().replace(/^"|"$/g, '');
-                frontmatter[key] = value;
-              }
+          if (response.ok) return response.text().then(renderMarkdown);
+          // Markdown not found — try the HTML version
+          return fetch(`./posts/${slug}.html`, { cache: 'default' })
+            .then((htmlRes) => {
+              if (!htmlRes.ok) throw new Error('Post not found');
+              return htmlRes.text().then(renderHtml);
             });
-          }
-
-          const title = frontmatter.title || slug.replace(/-/g, ' ');
-          const date = frontmatter.date || '';
-          const category = frontmatter.category || '';
-
-          titleEl.textContent = title;
-          metaEl.textContent = [category, date].filter(Boolean).join(' • ');
-
-          const rendered = marked.parse(markdownBody);
-          contentEl.innerHTML = DOMPurify.sanitize(rendered);
         })
         .catch(() => {
           showError('This blog post is not available yet.');
