@@ -12,139 +12,591 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>body{font-family:'Nunito',sans-serif;} .font-display{font-family:'Playfair Display',serif;}</style>
-  <title>CUET UG Design Aptitude Interactive Mock Test | Free Exam Preparation</title>
-  <meta name="description" content="Practice CUET UG Design Aptitude with interactive MCQs, instant option selection, and step-by-step explanations.">
+  <style>
+    body{font-family:'Nunito',sans-serif;} 
+    .font-display{font-family:'Playfair Display',serif;}
+    .option-correct {
+      background-color: #d1fae5 !important;
+      border-color: #10b981 !important;
+    }
+    .option-incorrect {
+      background-color: #fee2e2 !important;
+      border-color: #ef4444 !important;
+    }
+    .signal-correct {
+      color: #10b981;
+      font-weight: bold;
+    }
+    .signal-incorrect {
+      color: #ef4444;
+      font-weight: bold;
+    }
+  </style>
+  <title>CUET 2025 Fine Arts Interactive Mock Test</title>
+  <meta name="description" content="Complete CUET 2025 Fine Arts practice mock test with real exam questions, solutions, and score counting.">
 </head>
 <body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col">
-  <!-- ── HEADER ── -->
   <header class="sticky top-0 z-50 bg-slate-900 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-3">
-        <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal-500 text-slate-900 font-bold text-lg select-none">✏️</span>
+        <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal-500 text-slate-900 font-bold text-lg select-none">🎨</span>
         <span class="text-white font-display text-lg leading-tight">Free<span class="text-teal-400">Exam</span>Prep</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
-        <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
-        <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="design-architecture-hub#mock-tests" class="hover:text-teal-400 transition-colors">Mock Tests</a>
-        <a href="design-architecture-hub#pyq-papers" class="hover:text-teal-400 transition-colors">PYQ Papers</a>
-        <a href="blog" class="hover:text-teal-400 transition-colors">Blog</a>
+        <a href="#mcq-section" class="hover:text-teal-400 transition-colors">Exam Questions</a>
+        <a href="#score-board" class="hover:text-teal-400 transition-colors">Live Score</a>
       </nav>
       <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-teal-300 bg-teal-900/50 border border-teal-700 rounded-full px-3 py-1">✓ 100% Free</span>
-      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
     </div>
   </header>
-<!-- ── MOBILE MENU ── -->
-<div id="mobile-menu" class="hidden bg-slate-800 border-t border-slate-700 md:hidden">
-  <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-semibold text-slate-300">
-    <a href="/" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Home</a>
-    <a href="design-architecture-hub" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Exam Repository</a>
-    <a href="design-architecture-hub#mock-tests" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Mock Tests</a>
-    <a href="design-architecture-hub#pyq-papers" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">PYQ Papers</a>
-    <a href="blog" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Blog</a>
-  </nav>
-</div>
-<script>
-  (function(){
-    var btn = document.getElementById('mobile-menu-btn');
-    var menu = document.getElementById('mobile-menu');
-    if(btn && menu){
-      btn.addEventListener('click', function(){
-        var nowOpen = menu.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(nowOpen));
-      });
-      menu.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          menu.classList.add('hidden');
-          btn.setAttribute('aria-expanded','false');
-        });
-      });
-    }
-  })();
-</script>
 
   <div class="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-sm">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-sm">
-      <h1 class="font-bold text-slate-900">CUET UG Design Aptitude — Interactive Mock Test</h1>
-      <p class="text-slate-500 font-medium">⏳ 45 Minutes • 50 Marks • 2 Sample MCQs</p>
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-sm">
+      <div>
+        <h1 class="font-bold text-slate-900">CUET 2025 (Fine Arts) — Practice Mock Test</h1>
+        <p class="text-xs text-slate-500 mt-1">Language-Enhanced Edition with Detailed Explanations</p>
+      </div>
+      <p class="text-slate-500 font-medium text-sm whitespace-nowrap">⏳ Interactive Practice • 10 Questions</p>
     </div>
   </div>
 
-  <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8 space-y-6">
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q1">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 1</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">In CUET UG Design Aptitude, which practice strategy improves score reliability the most in limited time?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Memorize only final answers from previous papers</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Solve topic-wise timed sets and analyze mistakes immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip revision and attempt full mocks only</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt random questions without tracking weak areas</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Build a timed routine close to real exam pressure.</p>
-          <p><strong>Step 2:</strong> Mark conceptual and silly errors separately.</p>
-          <p><strong>Step 3:</strong> Revise weak topics and reattempt wrong questions.</p>
-          <p><strong>Correct Option:</strong> Solve topic-wise timed sets and analyze mistakes immediately.</p>
-        </div>
-      </details>
+  <main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8 space-y-6">
+    
+    <section class="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl border border-blue-200 p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-2">📋 CUET Fine Arts Syllabus & Pattern Summary</h2>
+      <p class="text-sm text-slate-600">This module includes key conceptual and historical questions testing your knowledge of traditional schools, modern Indian movements, and colonial documentation dynamics.</p>
     </section>
 
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q2">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 2</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">For CUET UG Design Aptitude, what is the best order during a timed mock to maximize accuracy and completion?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Start with the hardest section and stay there till completion</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt medium and easy questions first, then return to complex ones</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Leave no time for review and submit immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip instructions and guess unanswered questions</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Secure easy and medium questions quickly for stable score accumulation.</p>
-          <p><strong>Step 2:</strong> Reserve remaining time for difficult or calculation-heavy items.</p>
-          <p><strong>Step 3:</strong> Keep 3-5 minutes for review of marked questions.</p>
-          <p><strong>Correct Option:</strong> Attempt medium and easy questions first, then return to complex ones.</p>
+    <section id="mcq-section" class="space-y-6">
+      
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q1">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q1</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">History • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">For what purpose did British colonial officers commission local artists to paint scenes around them?</h2>
+          </div>
         </div>
-      </details>
+        <div class="space-y-3 mb-4" id="q1-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q1', 'A')">
+            <input type="radio" name="q1" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) To support local artists</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q1', 'B')">
+            <input type="radio" name="q1" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) For documentation</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q1', 'C')">
+            <input type="radio" name="q1" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) To exhibit the work</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q1', 'D')">
+            <input type="radio" name="q1" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) For creating an art school</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (B) For documentation</p>
+            <p class="text-xs text-slate-500">Before photography was invented, painting was the most effective medium for documenting visual surroundings. Local Indian artists trained in traditional miniature styles were commissioned to create highly detailed and accurate representations.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q2">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q2</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Collections • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">Where is the artwork 'Babur Inspecting the Fort of Gwalior' by Bhure currently displayed?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q2-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q2', 'A')">
+            <input type="radio" name="q2" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Indian Museum, Kolkata</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q2', 'B')">
+            <input type="radio" name="q2" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) British Museum, London</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q2', 'C')">
+            <input type="radio" name="q2" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Museum of Applied Arts, Vienna</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q2', 'D')">
+            <input type="radio" name="q2" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) National Museum, New Delhi</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (D) National Museum, New Delhi</p>
+            <p class="text-xs text-slate-500">This painting is part of the illustrated Baburnama manuscript from the 16th century. The National Museum at New Delhi maintains this extensive imperial collection.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q3">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q3</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Mughal School • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">Which two master artists came to India after Humayun regained power?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q3-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q3', 'A')">
+            <input type="radio" name="q3" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Shah Tahmasp and Shah Muzaffar</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q3', 'B')">
+            <input type="radio" name="q3" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Bihzad and Shah Muzaffar</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q3', 'C')">
+            <input type="radio" name="q3" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Mir Sayyid Ali and Abd us Samad</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q3', 'D')">
+            <input type="radio" name="q3" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) Sayyid Ali and Bihzad</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (C) Mir Sayyid Ali and Abd us Samad</p>
+            <p class="text-xs text-slate-500">They brought sophisticated techniques from Safavid Persia and blended them with indigenous Indian styles, laying down the actual foundation of the iconic Mughal School workshop.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q4">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q4</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Movements • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">Which art styles inspired Abanindranath Tagore and E.B. Havell?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q4-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q4', 'A')">
+            <input type="radio" name="q4" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Academic Style of Colonial Art</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q4', 'B')">
+            <input type="radio" name="q4" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Company School of painting</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q4', 'C')">
+            <input type="radio" name="q4" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Mughal and Pahari Miniature</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q4', 'D')">
+            <input type="radio" name="q4" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) Bundi paintings</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (C) Mughal and Pahari Miniature</p>
+            <p class="text-xs text-slate-500">The Bengal School founders rejected Western academic approaches. They drew design inspiration from local heritage, particularly the graceful fluid dynamics of Mughal and Pahari miniature traditions alongside Ajanta murals.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q5">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q5</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Themes • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">What were the primary themes in Raja Ravi Varma's paintings?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q5-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q5', 'A')">
+            <input type="radio" name="q5" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Shiva-Parvati</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q5', 'B')">
+            <input type="radio" name="q5" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Ramayana and Mahabharata</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q5', 'C')">
+            <input type="radio" name="q5" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Barahmasa</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q5', 'D')">
+            <input type="radio" name="q5" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) Bhagvata Purana</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (B) Ramayana and Mahabharata</p>
+            <p class="text-xs text-slate-500">Raja Ravi Varma fused classic European academic oil painting oil rendering with traditional Indian literary themes, mass-producing oleographs that reached households throughout India.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q6">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q6</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Institutions • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">Who founded the Indian Society of Oriental Art?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q6-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q6', 'A')">
+            <input type="radio" name="q6" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Rabindranath Tagore</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q6', 'B')">
+            <input type="radio" name="q6" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Gaganendranath Tagore</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q6', 'C')">
+            <input type="radio" name="q6" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Abanindranath Tagore</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q6', 'D')">
+            <input type="radio" name="q6" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) E. B. Havell</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (C) Abanindranath Tagore</p>
+            <p class="text-xs text-slate-500">Established in Calcutta in 1907, Abanindranath Tagore was the primary ideological lead and mentor, promoting localized indigenous forms over Western styles.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q7">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q7</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Nationalism • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">Which artist painted the Haripura posters?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q7-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q7', 'A')">
+            <input type="radio" name="q7" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Jamini Roy</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q7', 'B')">
+            <input type="radio" name="q7" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Nandalal Bose</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q7', 'C')">
+            <input type="radio" name="q7" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Amrita Sher-Gill</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q7', 'D')">
+            <input type="radio" name="q7" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) Kshitindranath Majumdar</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (B) Nandalal Bose</p>
+            <p class="text-xs text-slate-500">Commissioned by Mahatma Gandhi for the 1938 Indian National Congress session at Haripura, these handmade posters beautifully depicted local agrarian rural life dynamics.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q8">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q8</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Aesthetics • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">What were the primary characteristics of artworks produced under Shah Jahan's patronage?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q8-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q8', 'A')">
+            <input type="radio" name="q8" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Subliminal qualities and exalted beautification</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q8', 'B')">
+            <input type="radio" name="q8" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Detailed political conquests and seminal court scenes</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q8', 'C')">
+            <input type="radio" name="q8" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Illustration of manuscripts such as Hamza Nama</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q8', 'D')">
+            <input type="radio" name="q8" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) Flat perspective and strong use of lines</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (A) Subliminal qualities and exalted beautification</p>
+            <p class="text-xs text-slate-500">Art shifted to highly formal, opulent, and heavily idealized visual styles featuring high technical layout precision and intense gold leaf application.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q9">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q9</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Deccani School • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">To which school of miniature painting does the painting 'Yogini' belong?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q9-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q9', 'A')">
+            <input type="radio" name="q9" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Mughal School of Miniature Painting</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q9', 'B')">
+            <input type="radio" name="q9" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) The Rajasthani School of Miniature Painting</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q9', 'C')">
+            <input type="radio" name="q9" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) The Pahari Schools of Miniature Painting</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q9', 'D')">
+            <input type="radio" name="q9" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) The Deccani School of Miniature Painting</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (D) The Deccani School of Miniature Painting</p>
+            <p class="text-xs text-slate-500">Characterized by elongated figures and deep mystical settings, this female ascetic artwork is specifically attributed to the Bijapur sub-school of the Deccan.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q10">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Q10</span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded">Technique • 1 Mark</span>
+              <span class="text-xs font-semibold text-orange-600 bg-orange-50 px-2.5 py-1 rounded">📄 CUET 2025</span>
+            </div>
+            <h2 class="text-base font-semibold text-slate-900 mt-3">What technique did Abdul Rehman Chughtai use in his works?</h2>
+          </div>
+        </div>
+        <div class="space-y-3 mb-4" id="q10-options">
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q10', 'A')">
+            <input type="radio" name="q10" value="A" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(A) Wash technique</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q10', 'B')">
+            <input type="radio" name="q10" value="B" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(B) Bronze casting</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q10', 'C')">
+            <input type="radio" name="q10" value="C" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(C) Impasto</span>
+            <span class="signal hidden"></span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-teal-50 hover:border-teal-300 transition" onclick="checkAnswer(this, 'q10', 'D')">
+            <input type="radio" name="q10" value="D" class="text-teal-600 focus:ring-teal-500"> 
+            <span class="text-sm flex-1">(D) Screen printing</span>
+            <span class="signal hidden"></span>
+          </label>
+        </div>
+        <details class="border border-teal-200 rounded-xl overflow-hidden">
+          <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Solution</summary>
+          <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
+            <p><strong>✓ Answer:</strong> (A) Wash technique</p>
+            <p class="text-xs text-slate-500">Associated with the Bengal School, this involved layered thin translucent pigment mixed with frequent water baths to create an ethereal, signature atmosphere.</p>
+          </div>
+        </details>
+      </section>
+
     </section>
 
-    <div class="text-center">
-      <a href="cuet-ug-design-aptitude-pyq" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Review 10-Year PYQs</a>
+    <section id="score-board" class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-200 p-6 shadow-sm mt-12 sticky bottom-0">
+      <div class="grid grid-cols-4 gap-4">
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm border border-emerald-100">
+          <p class="text-sm font-semibold text-slate-600">Total Score</p>
+          <p id="score" class="text-3xl font-bold text-emerald-600 mt-1">0</p>
+        </div>
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm border border-emerald-100">
+          <p class="text-sm font-semibold text-slate-600">Correct</p>
+          <p id="correct" class="text-3xl font-bold text-emerald-600 mt-1">0</p>
+        </div>
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm border border-red-100">
+          <p class="text-sm font-semibold text-slate-600">Wrong</p>
+          <p id="wrong" class="text-3xl font-bold text-red-600 mt-1">0</p>
+        </div>
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+          <p class="text-sm font-semibold text-slate-600">Progress</p>
+          <p id="progress" class="text-3xl font-bold text-blue-600 mt-1">0/10</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-6 space-y-4 pb-6">
+      <button onclick="resetTest()" class="inline-flex items-center bg-slate-600 hover:bg-slate-700 text-white text-sm font-semibold px-6 py-3 rounded-lg transition shadow-sm">🔄 Reset Practice Tracker</button>
     </div>
   </main>
 
-  <!-- ── FOOTER ── -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-10">
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-10 border-t border-slate-800">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
       <div>
-        <a href="/" class="flex items-center gap-2 mb-3">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-slate-900 font-bold">✏️</span>
-          <span class="text-white font-semibold text-sm">FreeExamPrep</span>
-        </a>
-        <p>© 2026 FreeExamPreparation.com</p>
-      </div>
-      <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
-        <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
-        <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="nift-creative-ability-pyq" class="hover:text-teal-400 transition-colors">NIFT PYQs</a>
-        <a href="nid-dat-design-principles-pyq" class="hover:text-teal-400 transition-colors">NID DAT PYQs</a>
-        <a href="ceed-design-thinking-creativity-pyq" class="hover:text-teal-400 transition-colors">CEED PYQs</a>
-        <a href="mitid-dat-design-aptitude-pyq" class="hover:text-teal-400 transition-colors">MITID DAT PYQs</a>
-        <a href="seed-symbiosis-design-pyq" class="hover:text-teal-400 transition-colors">SEED PYQs</a>
+        <span class="text-white font-semibold text-sm">FreeExamPrep Portal</span>
+        <p>© 2026 Structured Mock Repositories. Generated for seamless integration.</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    const answerKey = {
+      q1: 'B', q2: 'D', q3: 'C', q4: 'C', q5: 'B',
+      q6: 'C', q7: 'B', q8: 'A', q9: 'D', q10: 'A'
+    };
+
+    let stats = {
+      correct: 0,
+      wrong: 0,
+      answered: {}
+    };
+
+    function checkAnswer(label, questionId, selectedValue) {
+      const correctAnswer = answerKey[questionId];
+      const optionsDiv = document.getElementById(questionId + '-options');
+      const allLabels = optionsDiv.querySelectorAll('label');
+      
+      if (stats.answered[questionId]) {
+        return; // Prevent multi-clicks
+      }
+
+      stats.answered[questionId] = true;
+
+      allLabels.forEach(lbl => {
+        const input = lbl.querySelector('input');
+        const signal = lbl.querySelector('.signal');
+        
+        if (input.value === correctAnswer) {
+          lbl.classList.add('option-correct');
+          signal.textContent = '✓ Correct';
+          signal.classList.add('signal-correct');
+          signal.classList.remove('hidden');
+        } else if (input.value === selectedValue && selectedValue !== correctAnswer) {
+          lbl.classList.add('option-incorrect');
+          signal.textContent = '✗ Incorrect';
+          signal.classList.add('signal-incorrect');
+          signal.classList.remove('hidden');
+        }
+      });
+
+      if (selectedValue === correctAnswer) {
+        stats.correct++;
+      } else {
+        stats.wrong++;
+      }
+
+      updateScore();
+    }
+
+    function updateScore() {
+      document.getElementById('score').textContent = stats.correct;
+      document.getElementById('correct').textContent = stats.correct;
+      document.getElementById('wrong').textContent = stats.wrong;
+      document.getElementById('progress').textContent = Object.keys(stats.answered).length + '/10';
+    }
+
+    function resetTest() {
+      stats = { correct: 0, wrong: 0, answered: {} };
+      document.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.checked = false;
+      });
+      document.querySelectorAll('label').forEach(label => {
+        label.classList.remove('option-correct', 'option-incorrect');
+        const signal = label.querySelector('.signal');
+        if(signal) {
+          signal.classList.add('hidden');
+          signal.textContent = '';
+        }
+      });
+      updateScore();
+    }
+  </script>
 </body>
 </html>
