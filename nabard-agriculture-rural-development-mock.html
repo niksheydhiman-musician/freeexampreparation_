@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NABARD Agriculture Rural Development Interactive Mock Test | Free Exam Preparation</title>
-  <meta name="description" content="Practice NABARD Agriculture Rural Development with interactive MCQs, instant option selection, and step-by-step explanations.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free NABARD ARD Mock Test & Solved Practice Questions | FreeExamPrep</title>
+  <meta name="description" content="Attempt our free full-length mock test for NABARD Agriculture & Rural Development (ARD). Features 50 high-yield questions with detailed step-by-step explanations, time tracking, and domain performance analysis." />
+  <meta name="keywords" content="NABARD ARD mock test, Agriculture Rural Development preparation, NABARD Grade A previous year questions, free agricultural engineering test, NABARD schemes solved papers" />
+  <link rel="canonical" href="https://freeexampreparation.com/nabard-ard-mock" />
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX CDN for beautiful mathematical formatting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    body { font-family: 'Nunito', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #111827 0%, #1e3a2f 60%, #064e3b 100%);
+      position: relative; overflow: hidden;
     }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>body{font-family:'Inter',sans-serif;}</style>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>body{font-family:'Nunito',sans-serif;} .font-display{font-family:'Playfair Display',serif;}</style>
+    .hero-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .card-lift { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+    /* Hide scrollbars but preserve functionality */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col">
-    <!-- ── HEADER ── -->
+<body class="bg-slate-50 text-slate-700 antialiased flex flex-col min-h-screen">
+
+  <!-- ── HEADER ── -->
   <header class="sticky top-0 z-50 bg-slate-900 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-3">
@@ -29,7 +49,7 @@
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
         <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
         <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="design-architecture-hub#mock-tests" class="hover:text-teal-400 transition-colors">Mock Tests</a>
+        <a href="design-architecture-hub#mock-tests" class="text-teal-400">Mock Tests</a>
         <a href="design-architecture-hub#pyq-papers" class="hover:text-teal-400 transition-colors">PYQ Papers</a>
         <a href="blog" class="hover:text-teal-400 transition-colors">Blog</a>
       </nav>
@@ -39,113 +59,1650 @@
       </button>
     </div>
   </header>
-<!-- ── MOBILE MENU ── -->
-<div id="mobile-menu" class="hidden bg-slate-800 border-t border-slate-700 md:hidden">
-  <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-semibold text-slate-300">
-    <a href="/" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Home</a>
-    <a href="design-architecture-hub" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Exam Repository</a>
-    <a href="design-architecture-hub#mock-tests" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Mock Tests</a>
-    <a href="design-architecture-hub#pyq-papers" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">PYQ Papers</a>
-    <a href="blog" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Blog</a>
-  </nav>
-</div>
-<script>
-  (function(){
-    var btn = document.getElementById('mobile-menu-btn');
-    var menu = document.getElementById('mobile-menu');
-    if(btn && menu){
-      btn.addEventListener('click', function(){
-        var nowOpen = menu.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(nowOpen));
-      });
-      menu.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          menu.classList.add('hidden');
-          btn.setAttribute('aria-expanded','false');
-        });
-      });
-    }
-  })();
-</script>
 
-  <div class="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-sm">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-sm">
-      <h1 class="font-bold text-slate-900">NABARD Agriculture Rural Development — Interactive Mock Test</h1>
-      <p class="text-slate-500 font-medium">⏳ 45 Minutes • 50 Marks • 2 Sample MCQs</p>
+  <!-- ── MOBILE MENU ── -->
+  <div id="mobile-menu" class="hidden bg-slate-800 border-t border-slate-700 md:hidden">
+    <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-semibold text-slate-300">
+      <a href="/" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Home</a>
+      <a href="design-architecture-hub" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Exam Repository</a>
+      <a href="design-architecture-hub#mock-tests" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Mock Tests</a>
+      <a href="design-architecture-hub#pyq-papers" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">PYQ Papers</a>
+      <a href="blog" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Blog</a>
+    </nav>
+  </div>
+
+  <main class="flex-grow">
+    <!-- ── HERO / INTRO BANNER ── -->
+    <section class="hero-bg py-16 px-4 text-center text-white relative">
+      <div class="max-w-4xl mx-auto relative z-10">
+        <span class="inline-block text-xs font-bold tracking-widest uppercase text-emerald-300 bg-emerald-950/60 border border-emerald-700 rounded-full px-4 py-1.5 mb-4">
+          NABARD Grade A Special
+        </span>
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-white">
+          Agriculture &amp; Rural Development
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-2">
+          Master the highest-yielding ARD syllabus with our 50-Question Comprehensive Mock Test.
+        </p>
+        <div class="flex items-center justify-center gap-2 text-xs text-emerald-300 font-semibold">
+          <span>✓ 5 Strategic Domains</span>
+          <span>•</span>
+          <span>✓ Real-time Explanations</span>
+          <span>•</span>
+          <span>✓ Self-Evaluation Dashboard</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MAIN CONTAINER ── -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+      <!-- 1. LANDING CONFIGURATION / INSTRUCTION SCREEN -->
+      <div id="landing-screen" class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md border border-slate-100 p-6 sm:p-10">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Select Your Test Mode</h2>
+        <p class="text-slate-500 mb-6 text-sm sm:text-base">
+          This test comprises 50 handpicked, syllabus-aligned questions covering Agriculture, Horticulture, Animal Husbandry, Irrigation, and Rural Government Schemes.
+        </p>
+
+        <!-- Test Parameters / Syllabi Breakdown -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="border border-emerald-100 bg-emerald-50/50 rounded-xl p-4">
+            <h4 class="font-bold text-emerald-900 text-sm mb-2 flex items-center gap-1.5">
+              🌿 Syllabus Domains Included:
+            </h4>
+            <ul class="text-xs text-slate-600 space-y-1.5">
+              <li>• <strong>Domain I:</strong> Agronomy &amp; Soils (Q1-Q10)</li>
+              <li>• <strong>Domain II:</strong> Horticulture &amp; Forestry (Q11-Q20)</li>
+              <li>• <strong>Domain III:</strong> Animal Husbandry &amp; Poultry (Q21-Q30)</li>
+              <li>• <strong>Domain IV:</strong> Fisheries &amp; Post-Harvest Tech (Q31-Q40)</li>
+              <li>• <strong>Domain V:</strong> Rural Development &amp; Schemes (Q41-Q50)</li>
+            </ul>
+          </div>
+          <div class="border border-slate-100 bg-slate-50 rounded-xl p-4">
+            <h4 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-1.5">
+              ⚖️ Scoring Matrix:
+            </h4>
+            <ul class="text-xs text-slate-600 space-y-1.5">
+              <li>• <strong>Total Questions:</strong> 50 Single Choice MCQs</li>
+              <li>• <strong>Recommended Duration:</strong> 60 Minutes</li>
+              <li>• <strong>Marking:</strong> +1.0 for Correct, -0.25 for Incorrect</li>
+              <li>• <strong>Detailed Analysis:</strong> Real-time feedback</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mode Selectors -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <label class="relative flex flex-col p-5 bg-white border-2 border-emerald-500 rounded-2xl cursor-pointer shadow-sm focus-within:ring-2 focus-within:ring-emerald-400 hover:bg-slate-50 transition" id="label-practice-mode">
+            <input type="radio" name="test-mode" value="practice" checked class="sr-only" id="radio-practice" />
+            <span class="flex items-center gap-2 font-bold text-slate-900 text-base">
+              🧪 Practice &amp; Review Mode
+            </span>
+            <span class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Perfect for self-paced study. Check explanations instantly after selecting an answer. No countdown pressure.
+            </span>
+            <span class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-emerald-500 flex items-center justify-center bg-emerald-500 text-white text-xs font-bold" id="indicator-practice">✓</span>
+          </label>
+
+          <label class="relative flex flex-col p-5 bg-white border-2 border-slate-200 rounded-2xl cursor-pointer hover:bg-slate-50 transition" id="label-exam-mode">
+            <input type="radio" name="test-mode" value="exam" class="sr-only" id="radio-exam" />
+            <span class="flex items-center gap-2 font-bold text-slate-900 text-base">
+              ⏱️ Timed Exam Simulator
+            </span>
+            <span class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Provides an authentic examination feel. Features a running 60-minute countdown. View all answers and metrics upon submitting.
+            </span>
+            <span class="absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-slate-300" id="indicator-exam"></span>
+          </label>
+        </div>
+
+        <div class="text-center">
+          <button id="btn-start-test" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-10 py-4 rounded-xl shadow-lg shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5">
+            🌾 Launch NABARD Mock Test
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. ACTIVE TEST INTERFACE (GRID LAYOUT) -->
+      <div id="test-screen" class="hidden">
+        <!-- Top Status Bar -->
+        <div class="bg-white border border-slate-100 shadow-sm rounded-2xl p-4 mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span id="current-mode-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase bg-emerald-100 text-emerald-800">
+              Practice Mode
+            </span>
+            <span class="text-slate-400 text-sm">|</span>
+            <span class="text-sm font-semibold text-slate-600" id="domain-category-display">
+              Domain I: Agriculture
+            </span>
+          </div>
+          <div class="flex items-center gap-4">
+            <!-- Timer Display -->
+            <div id="timer-container" class="hidden items-center gap-2 text-slate-700 font-bold bg-slate-100 px-4 py-2 rounded-xl border border-slate-200">
+              <span class="text-lg">⏱️</span>
+              <span id="timer-clock" class="text-base font-mono">60:00</span>
+            </div>
+            <!-- Complete Progress -->
+            <div class="text-sm font-bold text-slate-600">
+              Progress: <span id="progress-text" class="text-emerald-600">0/50</span> Completed
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Workspace: Card + Sidebar Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+          
+          <!-- LEFT / CENTRAL COLUMN: CURRENT QUESTION CARD -->
+          <div class="lg:col-span-3 space-y-6">
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6 sm:p-8" id="question-card-container">
+              <!-- Question Header (Number & Flags) -->
+              <div class="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
+                <h3 class="font-bold text-slate-900 text-lg">
+                  Question <span id="lbl-question-num">1</span> of 50
+                </h3>
+                <button id="btn-flag" class="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-amber-600 transition-colors">
+                  <span class="text-base" id="icon-flag">🏳️</span> <span id="lbl-flag-text">Flag for Review</span>
+                </button>
+              </div>
+
+              <!-- Question Text -->
+              <div id="box-question-text" class="text-slate-800 text-base sm:text-lg font-medium leading-relaxed mb-6">
+                <!-- Injected via JS -->
+              </div>
+
+              <!-- Options -->
+              <div id="options-container" class="space-y-3.5 mb-8">
+                <!-- Injected via JS -->
+              </div>
+
+              <!-- Instant explanation box (Only visible in Practice mode or completed state) -->
+              <div id="explanation-box" class="hidden bg-emerald-50 border border-emerald-200 rounded-xl p-5 mb-6">
+                <h4 class="font-bold text-emerald-900 text-sm flex items-center gap-1.5 mb-2">
+                  <span>💡</span> Detailed Explanation:
+                </h4>
+                <p id="explanation-text" class="text-xs sm:text-sm text-emerald-800 leading-relaxed">
+                  <!-- Injected via JS -->
+                </p>
+              </div>
+
+              <!-- Card Action Controls -->
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                <div class="flex gap-2">
+                  <button id="btn-prev" class="px-5 py-2.5 border border-slate-200 rounded-xl text-slate-600 font-semibold hover:bg-slate-50 text-sm transition">
+                    ← Previous
+                  </button>
+                  <button id="btn-next" class="px-5 py-2.5 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 text-sm transition">
+                    Next →
+                  </button>
+                </div>
+                <button id="btn-submit-early" class="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm transition shadow-md shadow-red-600/20">
+                  Submit Full Exam
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: GRID CONTROL BOARD -->
+          <div class="lg:col-span-1 space-y-6 lg:sticky lg:top-24">
+            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-5">
+              <h4 class="font-bold text-slate-950 text-sm mb-3.5 flex items-center gap-1.5 justify-between">
+                <span>Navigate Grid</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 text-slate-600 uppercase font-bold font-mono">Q1-Q50</span>
+              </h4>
+
+              <!-- Visual Legend -->
+              <div class="flex flex-wrap gap-2 text-[10px] font-bold text-slate-500 mb-4 pb-3 border-b border-slate-100">
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-slate-100 border border-slate-200"></span> Unvisited</span>
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-emerald-500"></span> Solved</span>
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-amber-500"></span> Flagged</span>
+              </div>
+
+              <!-- Question Numbers Matrix -->
+              <div id="grid-matrix" class="grid grid-cols-5 sm:grid-cols-10 lg:grid-cols-5 gap-2 max-h-80 overflow-y-auto pr-1">
+                <!-- 50 grid bubbles dynamically injected via JS -->
+              </div>
+            </div>
+
+            <!-- Helpful Hints / Strategy Guidelines -->
+            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+              <h5 class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-2">💡 ARD Pro Tip</h5>
+              <p class="text-xs text-emerald-800 leading-relaxed">
+                In actual NABARD papers, Rural Schemes (Domain V) make up a substantial share of questions. Pay close attention to eligibility ages, budget sizes, and implementing ministries.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3. DETAILED PERFORMANCE REPORT SHEET -->
+      <div id="results-screen" class="hidden max-w-5xl mx-auto space-y-8">
+        <!-- Main Stats Card -->
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-lg p-6 sm:p-10 text-center relative overflow-hidden">
+          <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-emerald-500/5 blur-3xl"></div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-teal-500/5 blur-3xl"></div>
+
+          <span class="inline-block text-4xl mb-4">🏆</span>
+          <h2 class="font-display text-3xl font-bold text-slate-900 mb-2">Test Assessment Completed</h2>
+          <p class="text-slate-500 text-sm mb-8">Review your complete scoring metrics, accuracy ratings, and domain-wise competency below.</p>
+
+          <!-- Core Metrics Layout -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Total Score</p>
+              <h3 class="text-3xl font-extrabold text-slate-950 font-mono" id="results-score">0 / 50</h3>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Accuracy</p>
+              <h3 class="text-3xl font-extrabold text-emerald-600 font-mono" id="results-accuracy">0%</h3>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Time Expended</p>
+              <h3 class="text-3xl font-extrabold text-slate-950 font-mono" id="results-duration">00:00</h3>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Skipped / Missed</p>
+              <h3 class="text-3xl font-extrabold text-amber-600 font-mono" id="results-skipped">0</h3>
+            </div>
+          </div>
+
+          <!-- Evaluation Feedback Message -->
+          <div class="max-w-2xl mx-auto mb-4 bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-sm text-emerald-800" id="assessment-feedback">
+            Assessment is loaded. Complete test to see.
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-3">
+            <button id="btn-restart-from-results" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition">
+              🔄 Try Test Again
+            </button>
+            <button id="btn-show-solutions" class="border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 text-sm px-6 py-3 rounded-xl transition">
+              🔍 Review Full Answer Sheet
+            </button>
+          </div>
+        </div>
+
+        <!-- Domain-wise Diagnostics Card -->
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6 sm:p-8">
+          <h3 class="font-display text-xl font-bold text-slate-950 mb-6 flex items-center gap-2">
+            <span>📊</span> Domain Competency Breakdown
+          </h3>
+          <div class="space-y-5" id="domain-competency-bars">
+            <!-- Dynamically injected bars for all 5 domains -->
+          </div>
+        </div>
+
+        <!-- Full Answers Review Section -->
+        <div id="full-solutions-section" class="hidden space-y-6">
+          <h3 class="font-display text-2xl font-bold text-slate-950 flex items-center gap-2">
+            <span>📑</span> Question-by-Question Solved Guide
+          </h3>
+          <div id="solutions-list-container" class="space-y-5">
+            <!-- Dynamic compilation of all 50 questions with user answers, correct answers and complete explanations -->
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ── CONFIRMATION SUBMISSION MODAL ── -->
+  <div id="submit-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 border border-slate-100 shadow-2xl relative transform transition duration-300 scale-95 opacity-0" id="modal-content">
+      <h3 class="font-display text-2xl font-bold text-slate-900 mb-3">Submit Your Test?</h3>
+      <p class="text-sm text-slate-500 leading-relaxed mb-6">
+        Are you ready to submit your test for grading? You will instantly unlock your score reports, domain analysis, and fully structured correct solutions.
+      </p>
+
+      <!-- Stats overview within modal -->
+      <div class="bg-slate-50 border border-slate-100 rounded-xl p-4 mb-6 text-xs text-slate-600 grid grid-cols-2 gap-3 font-semibold">
+        <div>• Solved: <span class="text-emerald-600" id="modal-solved-count">0 / 50</span></div>
+        <div>• Flagged for Review: <span class="text-amber-500" id="modal-flagged-count">0</span></div>
+      </div>
+
+      <div class="flex gap-3">
+        <button id="btn-modal-cancel" class="flex-1 px-4 py-3 border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-sm rounded-xl transition">
+          Keep Solving
+        </button>
+        <button id="btn-modal-confirm" class="flex-1 px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-sm rounded-xl transition shadow-md shadow-red-600/10">
+          Yes, Submit Test
+        </button>
+      </div>
     </div>
   </div>
 
-  <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8 space-y-6">
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q1">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 1</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">In NABARD Agriculture Rural Development, which practice strategy improves score reliability the most in limited time?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Memorize only final answers from previous papers</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Solve topic-wise timed sets and analyze mistakes immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip revision and attempt full mocks only</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt random questions without tracking weak areas</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Build a timed routine close to real exam pressure.</p>
-          <p><strong>Step 2:</strong> Mark conceptual and silly errors separately.</p>
-          <p><strong>Step 3:</strong> Revise weak topics and reattempt wrong questions.</p>
-          <p><strong>Correct Option:</strong> Solve topic-wise timed sets and analyze mistakes immediately.</p>
+  <!-- ── FOOTER ── -->
+  <footer class="bg-slate-900 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 mt-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <a href="/" class="flex items-center gap-3 mb-4">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal-500 text-slate-900 font-bold text-lg">✏️</span>
+            <span class="text-white font-display text-lg">Free<span class="text-teal-400">Exam</span>Prep</span>
+          </a>
+          <p class="text-sm leading-relaxed">Free design and administrative entrance exam preparation for every student in India. No signup. No paywall. Just learning.</p>
         </div>
-      </details>
-    </section>
-
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q2">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 2</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">For NABARD Agriculture Rural Development, what is the best order during a timed mock to maximize accuracy and completion?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Start with the hardest section and stay there till completion</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt medium and easy questions first, then return to complex ones</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Leave no time for review and submit immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip instructions and guess unanswered questions</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Secure easy and medium questions quickly for stable score accumulation.</p>
-          <p><strong>Step 2:</strong> Reserve remaining time for difficult or calculation-heavy items.</p>
-          <p><strong>Step 3:</strong> Keep 3-5 minutes for review of marked questions.</p>
-          <p><strong>Correct Option:</strong> Attempt medium and easy questions first, then return to complex ones.</p>
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/" class="hover:text-teal-400 transition-colors">Home</a></li>
+            <li><a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a></li>
+            <li><a href="blog" class="hover:text-teal-400 transition-colors">Blog</a></li>
+          </ul>
         </div>
-      </details>
-    </section>
-
-    <div class="text-center">
-      <a href="nabard-agriculture-rural-development-pyq" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Review 10-Year PYQs</a>
-    </div>
-  </main>
-
-    <!-- ── FOOTER ── -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-10">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
-      <div>
-        <a href="/" class="flex items-center gap-2 mb-3">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-slate-900 font-bold">✏️</span>
-          <span class="text-white font-semibold text-sm">FreeExamPrep</span>
-        </a>
-        <p>© 2026 FreeExamPreparation.com</p>
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Agricultural Exams</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="nabard-ard-mock-test" class="text-teal-400 transition-colors">NABARD Grade A (ARD)</a></li>
+            <li><a href="nift-creative-ability-pyq" class="hover:text-teal-400 transition-colors">NIFT Creative Ability</a></li>
+            <li><a href="nid-dat-design-principles-pyq" class="hover:text-teal-400 transition-colors">NID DAT Design Principles</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
-        <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
-        <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="nift-creative-ability-pyq" class="hover:text-teal-400 transition-colors">NIFT PYQs</a>
-        <a href="nid-dat-design-principles-pyq" class="hover:text-teal-400 transition-colors">NID DAT PYQs</a>
-        <a href="uceed-visualization-spatial-pyq" class="hover:text-teal-400 transition-colors">UCEED PYQs</a>
-        <a href="nata-architecture-drawing-pyq" class="hover:text-teal-400 transition-colors">NATA PYQs</a>
+      <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>© 2026 FreeExamPreparation.com — All content is for educational purposes only.</p>
+        <p class="text-slate-500">Hosted on GitHub Pages · Made with ❤️ for Indian aspirants</p>
       </div>
     </div>
   </footer>
+
+  <!-- ── JAVASCRIPT STATE ENGINE ── -->
+  <script>
+    // MOBILE NAV CONTROLLER
+    (function(){
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if(btn && menu){
+        btn.addEventListener('click', function(){
+          var nowOpen = menu.classList.toggle('hidden') === false;
+          btn.setAttribute('aria-expanded', String(nowOpen));
+        });
+      }
+    })();
+
+    // THE 50 QUESTION DATA SET
+    const questions = [
+      {
+        id: 1,
+        domain: "Domain I: Agriculture",
+        text: "Which of the following represents the correct botanical classification for Barley, a winter cereal crop grown in rabi systems?",
+        options: {
+          A: "Triticum aestivum",
+          B: "Hordeum vulgare",
+          C: "Zea mays",
+          D: "Sorghum vulgare",
+          E: "Solanum melongena"
+        },
+        correct: "B",
+        explanation: "Hordeum vulgare is the correct botanical name for Barley, a highly salt-tolerant rabi cereal. Triticum aestivum refers to common bread wheat, Zea mays represents maize, Sorghum vulgare is sorghum (jowar), and Solanum melongena is brinjal (eggplant)."
+      },
+      {
+        id: 2,
+        domain: "Domain I: Agriculture",
+        text: "The branch of agricultural science that studies the physical, chemical, and biological principles of soil, water, and crop management is:",
+        options: {
+          A: "Pomology",
+          B: "Olericulture",
+          C: "Agronomy",
+          D: "Horticulture",
+          E: "Silviculture"
+        },
+        correct: "C",
+        explanation: "Agronomy is the study of field crop production and soil management. It focuses on optimizing cropping systems, water use efficiency, and soil conservation practices to improve agricultural yields."
+      },
+      {
+        id: 3,
+        domain: "Domain I: Agriculture",
+        text: "The cultivation of crops in regions characterized by an annual rainfall of less than $750\\text{ mm}$, where drought is common and crop production relies on moisture-conservation techniques, is termed:",
+        options: {
+          A: "Rainfed farming",
+          B: "Dry farming",
+          C: "Dryland farming",
+          D: "Intensive farming",
+          E: "Wetland farming"
+        },
+        correct: "B",
+        explanation: "Dry farming occurs in areas with an annual rainfall of less than $750\\text{ mm}$. In these regions, crop failure is common due to prolonged dry spells, making soil moisture conservation essential. Dryland farming typically applies to regions receiving $750\\text{ mm}$ to $1150\\text{ mm}$ of rain, whereas rainfed farming refers to areas with over $1150\\text{ mm}$ of annual rainfall."
+      },
+      {
+        id: 4,
+        domain: "Domain I: Agriculture",
+        text: "In the Indian sub-continent, crops sown between October and December and harvested between February and April are classified as:",
+        options: {
+          A: "Kharif crops",
+          B: "Zaid crops",
+          C: "Rabi crops",
+          D: "Zaid Rabi crops",
+          E: "Zaid Kharif crops"
+        },
+        correct: "C",
+        explanation: "Rabi crops are winter crops sown after the monsoon rains subside (October to December) and harvested in the dry spring months (February to April). Wheat, barley, mustard, chickpea, and linseed are common rabi crops."
+      },
+      {
+        id: 5,
+        domain: "Domain I: Agriculture",
+        text: "The specific sequential and spatial arrangement of crops grown on a given area of land over a defined, repeating period of time is known as the:",
+        options: {
+          A: "Cropping Pattern",
+          B: "Cropping System",
+          C: "Mono-Cropping",
+          D: "Intercropping",
+          E: "Mixed Farming"
+        },
+        correct: "B",
+        explanation: "A cropping system represents the cropping patterns used on a farm and their interaction with available farm resources, technology, and management over a set timeframe. Cropping pattern, by contrast, refers simply to the spatial distribution of crops across a region at a single point in time."
+      },
+      {
+        id: 6,
+        domain: "Domain I: Agriculture",
+        text: "Which of the following soil types covers the largest geographical area in India, accounting for more than $40\\%$ of the country's total land area?",
+        options: {
+          A: "Black Cotton Soil",
+          B: "Red Soil",
+          C: "Alluvial Soil",
+          D: "Laterite Soil",
+          E: "Desert Soil"
+        },
+        correct: "C",
+        explanation: "Alluvial soils cover approximately $43\\%$ of India's total land area, primarily across the Indo-Gangetic plains. These soils are rich in potash but generally low in nitrogen and organic matter."
+      },
+      {
+        id: 7,
+        domain: "Domain I: Agriculture",
+        text: "In plant nutrition, which of the following secondary essential nutrients plays a critical role in maintaining cell wall structural integrity and regulating cell membrane stability?",
+        options: {
+          A: "Nitrogen",
+          B: "Phosphorus",
+          C: "Calcium",
+          D: "Potassium",
+          E: "Magnesium"
+        },
+        correct: "C",
+        explanation: "Calcium is an essential secondary nutrient that forms calcium pectate, a key component of the middle lamella in plant cell walls. It maintains cell wall structural integrity, regulates cell membrane stability, and supports enzymatic processes during rapid cell division."
+      },
+      {
+        id: 8,
+        domain: "Domain I: Agriculture",
+        text: "Within the official seed certification pathway established by Indian legislation, what is the direct, certified progeny of Breeder's Seed?",
+        options: {
+          A: "Nucleus Seed",
+          B: "Foundation Seed",
+          C: "Certified Seed",
+          D: "Registered Seed",
+          E: "Truthfully Labelled Seed"
+        },
+        correct: "B",
+        explanation: "The standard seed multiplication chain is structured to preserve genetic purity: Nucleus Seed $\\rightarrow$ Breeder Seed $\\rightarrow$ Foundation Seed $\\rightarrow$ Certified Seed. Foundation seed is produced directly from breeder seed and is verified to ensure genetic and physical purity standards."
+      },
+      {
+        id: 9,
+        domain: "Domain I: Agriculture",
+        text: "Which of the following organic manures, when cultivated and incorporated into the soil, provides the highest concentration of nitrogen on a dry weight basis?",
+        options: {
+          A: "Dhaincha (Sesbania aculeata)",
+          B: "Cowpea (Vigna unguiculata)",
+          C: "Sunhemp (Crotalaria juncea)",
+          D: "Chickpea (Cicer arietinum)",
+          E: "Cluster Bean (Cyamopsis tetragonoloba)"
+        },
+        correct: "C",
+        explanation: "Sunhemp (Crotalaria juncea) is a fast-growing green manure crop that produces a high amount of biomass and contains the highest nitrogen concentration (approximately $2.3\\%$ to $2.7\\%$ nitrogen on a dry-matter basis) among common green manure crops."
+      },
+      {
+        id: 10,
+        domain: "Domain I: Agriculture",
+        text: "The first separate, independent Department of Agriculture in British India was established in which year to coordinate land revenue and famine relief?",
+        options: {
+          A: "1854",
+          B: "1871",
+          C: "1881",
+          D: "1905",
+          E: "1919"
+        },
+        correct: "C",
+        explanation: "Based on the recommendations of the Famine Commission of 1880, a separate, independent Department of Agriculture was established in 1881 under the Government of India. This department was tasked with collecting agricultural data, managing land records, and coordinating famine relief efforts."
+      },
+      {
+        id: 11,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "The specialized branch of horticulture that focuses on the study, breeding, cultivation, and post-harvest management of fruit and nut crops is:",
+        options: {
+          A: "Pomology",
+          B: "Olericulture",
+          C: "Floriculture",
+          D: "Viticulture",
+          E: "Arboriculture"
+        },
+        correct: "A",
+        explanation: "Pomology is the science of growing and managing fruit and nut crops. Olericulture is the study of vegetable production, and viticulture focuses on grape cultivation."
+      },
+      {
+        id: 12,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "The science and cultivation of herbaceous, non-woody plants for food, dealing with the production, storage, and marketing of vegetable crops, is known as:",
+        options: {
+          A: "Pomology",
+          B: "Olericulture",
+          C: "Silviculture",
+          D: "Viticulture",
+          E: "Agroforestry"
+        },
+        correct: "B",
+        explanation: "Olericulture is the branch of horticulture that deals with the production, storage, processing, and marketing of vegetable crops. It focuses on both warm-season and cool-season herbaceous crops grown for human consumption."
+      },
+      {
+        id: 13,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "The scientific study and cultivation of grapevines, representing a major specialized economic subdivision of horticulture, is termed:",
+        options: {
+          A: "Pomology",
+          B: "Olericulture",
+          C: "Viticulture",
+          D: "Silviculture",
+          E: "Apiculture"
+        },
+        correct: "C",
+        explanation: "Viticulture is the science, production, and study of grapes. It covers the vegetative and reproductive management of grapevines, including trellis design, irrigation, and disease control."
+      },
+      {
+        id: 14,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "Which of the following represents the correct descending sequence of national production volume for major horticultural crop categories, according to official advance estimates?",
+        options: {
+          A: "Fruits > Vegetables > Spices > Plantation Crops",
+          B: "Vegetables > Fruits > Plantation Crops > Spices",
+          C: "Vegetables > Fruits > Spices > Plantation Crops",
+          D: "Plantation Crops > Vegetables > Fruits > Spices",
+          E: "Fruits > Vegetables > Plantation Crops > Spices"
+        },
+        correct: "B",
+        explanation: "According to official agricultural and horticultural advance production estimates, the descending volume sequence is: Vegetables > Fruits > Plantation Crops > Spices > Flowers > Aromatic and Medicinal Plants."
+      },
+      {
+        id: 15,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "To encourage the cultivation of bamboo by farmers in non-forest areas, the Government of India promulgated an Ordinance to amend the Forest Act, 1927, omitting bamboo from the definition of:",
+        options: {
+          A: "Timber",
+          B: "Shrub",
+          C: "Undergrowth",
+          D: "Tree",
+          E: "Minor Forest Produce"
+        },
+        correct: "D",
+        explanation: "In 2017, the Indian Forest Act, 1927 was amended to omit bamboo grown in non-forest areas from the definition of \"trees\". This change removed the strict permit requirements for harvesting and transporting non-forest bamboo, encouraging farmers to adopt bamboo-based agroforestry."
+      },
+      {
+        id: 16,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "Which country is the leading producer of bamboo in the world, followed by India?",
+        options: {
+          A: "India",
+          B: "China",
+          C: "Vietnam",
+          D: "Brazil",
+          E: "Indonesia"
+        },
+        correct: "B",
+        explanation: "China is the leading producer of bamboo in the world, with India ranking second. India contains the largest total geographic area under bamboo forests but has lower commercial productivity compared to China."
+      },
+      {
+        id: 17,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "Which of the following instruments is designed based on trigonometric principles to estimate the standing height of tree crops in forest mensuration?",
+        options: {
+          A: "Hypsometer",
+          B: "Abney's Level",
+          C: "Altimeter",
+          D: "Both (A) and (B)",
+          E: "All of the above"
+        },
+        correct: "E",
+        explanation: "Forest mensuration uses several tools to estimate timber height. Hypsometers, Abney's levels, and altimeters all use trigonometric principles, measuring angles and baseline distances to calculate tree height."
+      },
+      {
+        id: 18,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "Which of the following theories in forest mensuration, also known as \"Girder's Theory,\" explains the variations in tree taper by proposing that wind pressure is transferred to the base of the tree?",
+        options: {
+          A: "Metzger's Theory",
+          B: "Pressler's Theory",
+          C: "Jonson's Form Factor Theory",
+          D: "Schiffel's Formula",
+          E: "Hohenadl's Method"
+        },
+        correct: "A",
+        explanation: "Metzger's Theory (or Girder's Theory) states that a tree stem acts as a beam of uniform resistance against wind pressure. The wind pressure on the crown is transferred down the trunk, requiring a thicker, tapered base to maintain structural stability."
+      },
+      {
+        id: 19,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "The commercial mandarin variety widely cultivated in central India, also known colloquially and commercially as the \"Pokan\" mandarin, is the:",
+        options: {
+          A: "Kinnow",
+          B: "Coorg Mandarin",
+          C: "Khasi Mandarin",
+          D: "Nagpur Mandarin",
+          E: "Darjeeling Mandarin"
+        },
+        correct: "D",
+        explanation: "The Nagpur Mandarin, widely grown in central India, is internationally known as the \"Nagpur Pokan\". It is highly valued for its sweet juice, loose skin, and adaptability to regional microclimates."
+      },
+      {
+        id: 20,
+        domain: "Domain II: Horticulture and Forestry",
+        text: "The biological occurrence of seedlessness in commercial table grape varieties, such as Thompson Seedless, is primarily governed by which genetic mechanism?",
+        options: {
+          A: "Monogenic dominant gene",
+          B: "Cytoplasmic male sterility",
+          C: "Polygenic recessive gene inheritance",
+          D: "Chromosomal translocation",
+          E: "Monogenic recessive gene"
+        },
+        correct: "C",
+        explanation: "Seedlessness in commercial table grapes is caused by stenospermocarpy, which is controlled by a polygenic recessive gene complex. During this process, fertilization occurs but the embryo aborts early, leaving small seed remnants in the pulp."
+      },
+      {
+        id: 21,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "The period after parturition during which a female dairy animal actively synthesizes and secretes milk is termed the:",
+        options: {
+          A: "Dry period",
+          B: "Calving period",
+          C: "Gestation period",
+          D: "Lactation period",
+          E: "Service period"
+        },
+        correct: "D",
+        explanation: "The lactation period is the span of time an animal produces milk after giving birth. In dairy cattle, the ideal lactation period is 305 days, followed by a 60-day dry period to allow the udder tissue to regenerate before the next calving."
+      },
+      {
+        id: 22,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "Which of the following indigenous dairy cattle breeds has the highest milk yield in a lactation period?",
+        options: {
+          A: "Gir",
+          B: "Red Sindhi",
+          C: "Sahiwal",
+          D: "Tharparkar",
+          E: "Hariana"
+        },
+        correct: "C",
+        explanation: "Sahiwal is the highest milk-yielding indigenous (Bos indicus) dairy breed in India, producing between 2,000 and 3,200 kg of milk per lactation under standard management conditions. It is highly resistant to tick-borne diseases and heat stress."
+      },
+      {
+        id: 23,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "Which of the following indigenous buffalo breeds has the highest average milk yield and is characterized by its tightly curled, ring-like horns?",
+        options: {
+          A: "Surti",
+          B: "Murrah",
+          C: "Mehsana",
+          D: "Jaffrabadi",
+          E: "Nili-Ravi"
+        },
+        correct: "B",
+        explanation: "The Murrah buffalo, originating from Punjab and Haryana, is the premier dairy breed of buffalo. It has a deep black body, tightly curled horns, and high milk yield, making it popular for upgrading local buffalo populations."
+      },
+      {
+        id: 24,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "The complex hormonal and physiological process of maintaining and regulating ongoing milk secretion within the mammary alveoli is called:",
+        options: {
+          A: "Mammogenesis",
+          B: "Galactopoiesis",
+          C: "Lactogenesis",
+          D: "Involution",
+          E: "Colostrogenesis"
+        },
+        correct: "B",
+        explanation: "Galactopoiesis is the maintenance of established milk secretion. It requires complex hormonal support, including prolactin, growth hormone, and thyroid hormones, alongside regular milk removal to prevent mammary tissue involution."
+      },
+      {
+        id: 25,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "What is the causative infectious agent of Cowpox disease in dairy cattle?",
+        options: {
+          A: "Brucella abortus",
+          B: "Cowpox Virus (Orthopoxvirus)",
+          C: "Mycobacterium bovis",
+          D: "Foot and Mouth Disease Virus",
+          E: "Streptococcus uberis"
+        },
+        correct: "B",
+        explanation: "Cowpox is a mild eruptive skin disease of the udder and teats in cows, caused by the cowpox virus (CPXV), a member of the Orthopoxvirus genus. Brucella abortus causes brucellosis, and Mycobacterium bovis causes bovine tuberculosis."
+      },
+      {
+        id: 26,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "The management practice of permanently separating a young calf from its mother immediately or shortly after birth is known as:",
+        options: {
+          A: "Culling",
+          B: "Castration",
+          C: "Weaning",
+          D: "Dehorning",
+          E: "Branding"
+        },
+        correct: "C",
+        explanation: "Weaning is the practice of separating the calf from the cow. This allows farm managers to monitor the milk intake of the cow and transition the calf to solid starter feed, improving rearing efficiency."
+      },
+      {
+        id: 27,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "Why must fertilized poultry eggs be turned and rotated upside down multiple times daily during artificial incubation?",
+        options: {
+          A: "To increase the rate of gas exchange",
+          B: "To maintain uniform temperature distribution",
+          C: "To prevent the developing embryo from sticking to the inner shell membrane",
+          D: "To speed up the yolk absorption process",
+          E: "To prevent egg white condensation"
+        },
+        correct: "C",
+        explanation: "Egg turning is critical during the first 18 days of incubation. Regularly rotating the egg prevents the developing embryo from sticking to the inner shell membrane, reducing embryonic mortality and malposition."
+      },
+      {
+        id: 28,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "Which of the following sheep breeds, native to Rajasthan, is most suitable for producing the finest carpet wool in India?",
+        options: {
+          A: "Marwari",
+          B: "Malpura",
+          C: "Chokla",
+          D: "Nali",
+          E: "Jaisalmeri"
+        },
+        correct: "C",
+        explanation: "The Chokla sheep is known as the \"Merino of Rajasthan\". It produces highly crimped, fine-diameter wool that is valued for manufacturing high-quality carpets."
+      },
+      {
+        id: 29,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "According to standard dairy management guidelines, what is the minimum floor space requirement for housing a pregnant cow in an indoor pen?",
+        options: {
+          A: "$4\\text{ m}^2$",
+          B: "$10\\text{ m}^2$",
+          C: "$15\\text{ m}^2$",
+          D: "$20\\text{ m}^2$",
+          E: "$6\\text{ m}^2$"
+        },
+        correct: "B",
+        explanation: "Standard intensive livestock housing guidelines recommend a minimum covered floor space of $10\\text{ m}^2$ per pregnant cow to ensure animal welfare and prevent injury."
+      },
+      {
+        id: 30,
+        domain: "Domain III: Animal Husbandry and Poultry",
+        text: "The milk of which of the following domesticated farm animals contains the highest average percentage of Solids-Not-Fat (SNF)?",
+        options: {
+          A: "Cow",
+          B: "Buffalo",
+          C: "Sheep",
+          D: "Camel",
+          E: "Goat"
+        },
+        correct: "C",
+        explanation: "Sheep milk contains the highest average percentage of Solids-Not-Fat (SNF) (approximately $11\\%$ to $12\\%$), as well as higher fat and protein concentrations than cow or goat milk."
+      },
+      {
+        id: 31,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "Which of the following represents an advanced surface irrigation method where water is applied intermittently to furrow channels to reduce infiltration losses?",
+        options: {
+          A: "Basin Irrigation",
+          B: "Furrow Irrigation",
+          C: "Sprinkler Irrigation",
+          D: "Drip Irrigation",
+          E: "Surge Irrigation"
+        },
+        correct: "E",
+        explanation: "Surge irrigation is a modern variation of furrow irrigation. It applies water intermittently rather than continuously, which reduces infiltration rates along the furrow and improves distribution uniformity across the field."
+      },
+      {
+        id: 32,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "An irrigation system that uses buried lateral pipelines to apply water directly to the crop root zone under low operating pressure is:",
+        options: {
+          A: "Subsurface Drip Irrigation (SDI)",
+          B: "Overhead Sprinkler Irrigation",
+          C: "Surge Irrigation",
+          D: "Border Strip Irrigation",
+          E: "Check Basin Irrigation"
+        },
+        correct: "A",
+        explanation: "Subsurface Drip Irrigation (SDI) is a micro-irrigation system that applies water directly to the crop root zone through buried emitters. This method minimizes water loss from surface evaporation, runoff, and weed growth, leading to high water use efficiency."
+      },
+      {
+        id: 33,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "The physiological post-harvest practice of rapidly removing field heat from flowers and delicate horticultural crops immediately after harvest is called:",
+        options: {
+          A: "Curing",
+          B: "Waxing",
+          C: "Pre-cooling",
+          D: "Blanching",
+          E: "Degreening"
+        },
+        correct: "C",
+        explanation: "Pre-cooling is the rapid removal of field heat from freshly harvested horticultural crops, particularly flowers, berries, and leafy vegetables. This process lowers the crop's respiration rate, reduces ethylene production, and extends shelf life before transport."
+      },
+      {
+        id: 34,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "The yield of marketable crop produced per unit of water consumed by the crop through transpiration and soil evaporation is defined as:",
+        options: {
+          A: "Field Water Capacity",
+          B: "Water Use Efficiency",
+          C: "Evapotranspiration Ratio",
+          D: "Irrigation Index",
+          E: "Crop Water Requirement"
+        },
+        correct: "B",
+        explanation: "Water Use Efficiency (WUE) is calculated as the ratio of marketable crop yield to the total water lost through evapotranspiration. Improving WUE is a primary focus of modern micro-irrigation technologies."
+      },
+      {
+        id: 35,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "In ex-situ plant genetic conservation, seeds are preserved at ultra-low temperatures, typically using which of the following cryopreservation agents?",
+        options: {
+          A: "Liquid Carbon Dioxide",
+          B: "Solid dry ice",
+          C: "Liquid Nitrogen",
+          D: "Concentrated glycerol solution",
+          E: "Chilled saline solution"
+        },
+        correct: "C",
+        explanation: "Cryopreservation preserves biological materials at extremely low temperatures, typically $-196^\\circ\\text{C}$ using liquid nitrogen. This suspends cellular metabolism without damaging cell structures, allowing long-term storage of seed germplasm."
+      },
+      {
+        id: 36,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "The specific temperature at which air must be cooled to become fully saturated with water vapor, achieving a relative humidity of $100\\%$, is the:",
+        options: {
+          A: "Wet Bulb Temperature",
+          B: "Dry Bulb Temperature",
+          C: "Dew Point",
+          D: "Absolute Humidity point",
+          E: "Condensation index"
+        },
+        correct: "C",
+        explanation: "The dew point is the temperature to which air must be cooled (at constant pressure) for water vapor to condense into liquid water. At this temperature, the air reaches $100\\%$ relative humidity."
+      },
+      {
+        id: 37,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "Aquatic weeds that grow in wetlands with their root systems anchored in the bottom soil, while their leaves and flowers float on the water surface, are classified as:",
+        options: {
+          A: "Submerged weeds",
+          B: "Emergent weeds",
+          C: "Floating-leaved weeds",
+          D: "Free-floating weeds",
+          E: "Marginal weeds"
+        },
+        correct: "C",
+        explanation: "Floating-leaved weeds have roots anchored in the sediment, but their leaves float on the water surface. Emergent weeds have roots in the bottom with stems and leaves growing above the water, while free-floating weeds drift on the surface without soil contact."
+      },
+      {
+        id: 38,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "An airtight, vertical engineering structure designed for storing bulk materials like grains or fermented green fodder (silage) under anaerobic conditions is called a:",
+        options: {
+          A: "Godown",
+          B: "Trench",
+          C: "Silo",
+          D: "Cold Storage chamber",
+          E: "Crib"
+        },
+        correct: "C",
+        explanation: "A silo is an engineered structure for bulk storage of grains or silage. Its airtight design maintains anaerobic conditions, preserving green fodder through lactic acid fermentation or protecting dry grains from pests."
+      },
+      {
+        id: 39,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "The traditional processing of fish using salting, sun-drying, smoking, and pickling to reduce moisture content and prevent microbial spoilage is collectively termed:",
+        options: {
+          A: "Canning",
+          B: "Filleting",
+          C: "Curing",
+          D: "Surimi processing",
+          E: "Freeze-drying"
+        },
+        correct: "C",
+        explanation: "Fish curing is one of the oldest preservation methods. It includes salting, drying, smoking, and pickling, which lower water activity to inhibit bacterial growth and enzymatic spoilage, extending storage life without refrigeration."
+      },
+      {
+        id: 40,
+        domain: "Domain IV: Fisheries, Engineering, and Post-Harvest",
+        text: "For the development of the fisheries sector, which central project was launched under the Blue Revolution to promote intensive aquaculture through seed distribution?",
+        options: {
+          A: "Pradhan Mantri Matsya Sampada Yojana",
+          B: "Mission Fingerling",
+          C: "Integrated Fisheries Development Scheme",
+          D: "National Aquaculture Mission",
+          E: "Blue Development Program"
+        },
+        correct: "B",
+        explanation: "Ith \"Mission Fingerling\" was launched under the Blue Revolution program with an outlay of Rs. 52,000 lakhs. The scheme aims to establish hatcheries and fingerling rearing units to meet the demand for quality fish seed across the country."
+      },
+      {
+        id: 41,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "To improve rural road connectivity in areas affected by Left Wing Extremism (LWE), which scheme was approved by the Cabinet Committee on Economic Affairs?",
+        options: {
+          A: "Pradhan Mantri Gram Gram Sadak Yojana (PMGSY)",
+          B: "Road Connectivity Project for Left Wing Extremism Affected Areas (RCPLWEA)",
+          C: "Bharat Mala Rural Connectivity Scheme",
+          D: "Left Wing Extremism Rural Development Project",
+          E: "Shram Shakti Connectivity Yojana"
+        },
+        correct: "B",
+        explanation: "The RCPLWEA is a vertical of the Pradhan Mantri Gram Sadak Yojana (PMGSY). It was introduced to build all-weather road connectivity in LWE-affected districts, improving rural access and supporting security operations."
+      },
+      {
+        id: 42,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "What is the correct abbreviation of e-NAM, the online trading platform that connects physical APMC mandis to create a unified national market for agricultural commodities?",
+        options: {
+          A: "Electronic National Agricultural Methodology",
+          B: "Electronic National Agricultural Market",
+          C: "Electrical Non-Agricultural Produce Market",
+          D: "Electronic New Advanced Millets",
+          E: "Electronic National Allocation Medium"
+        },
+        correct: "B",
+        explanation: "e-NAM stands for Electronic National Agricultural Market. It is a pan-India electronic trading portal that integrates existing APMC mandis to create a unified national market for agricultural products, improving price discovery for farmers."
+      },
+      {
+        id: 43,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "Which of the following is a central poverty alleviation scheme implemented by the Ministry of Rural Development to organize the rural poor into self-help groups?",
+        options: {
+          A: "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission (DAY-NRLM)",
+          B: "Pradhan Mantri Gramin Awas Yojana",
+          C: "Deen Dayal Upadhyaya Grameen Kaushalya Yojana",
+          D: "Mission Antyodaya Yojana",
+          E: "Sansad Adarsh Gram Yojana"
+        },
+        correct: "A",
+        explanation: "DAY-NRLM was launched in 2011 to mobilize 10-12 crore rural households into self-help groups (SHGs). The program provides revolving funds, capital subsidies, and capacity building to help rural households build sustainable livelihoods."
+      },
+      {
+        id: 44,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "What is the eligible age group for unorganized sector workers to enroll in the Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM) voluntary and contributory pension scheme?",
+        options: {
+          A: "18 to 35 years",
+          B: "18 to 40 years",
+          C: "21 to 45 years",
+          D: "15 to 35 years",
+          E: "18 to 50 years"
+        },
+        correct: "B",
+        explanation: "PM-SYM is a pension scheme for unorganized workers, such as street vendors, rickshaw pullers, and agricultural laborers, with monthly incomes below Rs. 15,000. Eligible individuals must be between 18 and 40 years old, receiving a guaranteed minimum monthly pension of Rs. 3,000 after reaching age 60."
+      },
+      {
+        id: 45,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "What is the uniform premium rate paid by farmers for insurance coverage of all Kharif crops under the Pradhan Mantri Fasal Bima Yojana (PMFBY)?",
+        options: {
+          A: "$1.5\\%$ of sum insured",
+          B: "$5.0\\%$ of sum insured",
+          C: "$2.0\\%$ of sum insured",
+          D: "$2.5\\%$ of sum insured",
+          E: "$1.0\\%$ of sum insured"
+        },
+        correct: "C",
+        explanation: "Under PMFBY guidelines, the premium paid by farmers is capped at $2.0\\%$ for all Kharif crops, $1.5\\%$ for all Rabi crops, and $5.0\\%$ for annual commercial and horticultural crops. The remaining premium cost is shared equally by the central and state governments."
+      },
+      {
+        id: 46,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "Which expert committee's recommendations led to the establishment of the three-tier decentralized Panchayati Raj system in India?",
+        options: {
+          A: "Ashok Mehta Committee",
+          B: "Balwant Rai Mehta Committee",
+          C: "G.V.K. Rao Committee",
+          D: "L.M. Singhvi Committee",
+          E: "Sarkaria Commission"
+        },
+        correct: "B",
+        explanation: "The Balwant Rai Mehta Committee, appointed in 1957, recommended a three-tier Panchayati Raj system: Gram Panchayat at the village level, Panchayat Samiti at the block level, and Zilla Parishad at the district level. This system was later constitutionalized via the 73rd Amendment Act, 1992."
+      },
+      {
+        id: 47,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "Under the Gramin Bhandaran Yojana 2026, what is the maximum back-ended capital subsidy rate available for SC/ST applicants, women entrepreneurs, FPOs, and hilly regions to build scientific agricultural storage facilities?",
+        options: {
+          A: "$25\\%$ of the project cost",
+          B: "$30\\%$ of the project cost",
+          C: "$33.33\\%$ of the project cost",
+          D: "$40\\%$ of the project cost",
+          E: "$15\\%$ of the project cost"
+        },
+        correct: "C",
+        explanation: "The NABARD-linked Gramin Bhandaran Yojana provides a capital subsidy to support scientific agricultural storage. Reserved categories (SC/ST, women, FPOs, North-Eastern Region, and hilly areas) receive a $33.33\\%$ subsidy on the project cost (up to Rs. 1 Crore). General category applicants are eligible for a $25\\%$ subsidy (up to Rs. 75 Lakhs)."
+      },
+      {
+        id: 48,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "What is the minimum eligible storage capacity required for a project to qualify for financial assistance under the Gramin Bhandaran Yojana?",
+        options: {
+          A: "10 Metric Tons (MT)",
+          B: "25 Metric Tons (MT)",
+          C: "50 Metric Tons (MT)",
+          D: "100 Metric Tons (MT)",
+          E: "500 Metric Tons (MT)"
+        },
+        correct: "C",
+        explanation: "Under the Gramin Bhandaran Yojana guidelines, the minimum storage capacity eligible for a capital subsidy is 50 Metric Tons (MT), with a few exceptions allowed for small-capacity projects in hilly or tribal areas."
+      },
+      {
+        id: 49,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "To modernize Primary Agricultural Credit Societies (PACS), the Government of India approved a computerization project with a financial outlay of:",
+        options: {
+          A: "Rs. 1,500.00 Crore",
+          B: "Rs. 2,925.39 Crore",
+          C: "Rs. 4,819.86 Crore",
+          D: "Rs. 3,500.00 Crore",
+          E: "Rs. 5,200.00 Crore"
+        },
+        correct: "B",
+        explanation: "The Government of India approved Rs. 2,925.39 Crore to computerize functional PACS across the country. The project connects these local societies to a common, ERP-based national software, linking them directly with NABARD to improve transparency and operational efficiency."
+      },
+      {
+        id: 50,
+        domain: "Domain V: Rural Development & Government Schemes",
+        text: "For which of the following crops does the Government of India announce a statutory Fair and Remunerative Price (FRP) instead of a Minimum Support Price (MSP)?",
+        options: {
+          A: "Wheat",
+          B: "Paddy",
+          C: "Sugarcane",
+          D: "Cotton",
+          E: "Jute"
+        },
+        correct: "C",
+        explanation: "While the Government of India announces a Minimum Support Price (MSP) for 22 mandated agricultural crops, it releases a statutory Fair and Remunerative Price (FRP) for Sugarcane. Sugar mills are legally required to pay this minimum price to sugarcane farmers."
+      }
+    ];
+
+    // TEST ENGINE STATE
+    let currentMode = 'practice'; // 'practice' or 'exam'
+    let currentQuestionIndex = 0;
+    let userAnswers = {}; // { questionId: selectedOptionCode }
+    let flaggedQuestions = {}; // { questionId: boolean }
+    let isSubmitted = false;
+    let timerInterval = null;
+    let timeRemaining = 3600; // 60 minutes in seconds
+    let startTime = 3600;
+
+    // DOM ELEMENTS
+    const landingScreen = document.getElementById('landing-screen');
+    const testScreen = document.getElementById('test-screen');
+    const resultsScreen = document.getElementById('results-screen');
+    const modal = document.getElementById('submit-modal');
+    const modalContent = document.getElementById('modal-content');
+
+    const radioPractice = document.getElementById('radio-practice');
+    const radioExam = document.getElementById('radio-exam');
+    const labelPractice = document.getElementById('label-practice-mode');
+    const labelExam = document.getElementById('label-exam-mode');
+    const indicatorPractice = document.getElementById('indicator-practice');
+    const indicatorExam = document.getElementById('indicator-exam');
+
+    const btnStartTest = document.getElementById('btn-start-test');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const btnSubmitEarly = document.getElementById('btn-submit-early');
+    const btnFlag = document.getElementById('btn-flag');
+    const iconFlag = document.getElementById('icon-flag');
+    const lblFlagText = document.getElementById('lbl-flag-text');
+
+    const lblQuestionNum = document.getElementById('lbl-question-num');
+    const boxQuestionText = document.getElementById('box-question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const explanationBox = document.getElementById('explanation-box');
+    const explanationText = document.getElementById('explanation-text');
+    const progressText = document.getElementById('progress-text');
+    const currentModeBadge = document.getElementById('current-mode-badge');
+    const domainCategoryDisplay = document.getElementById('domain-category-display');
+    const timerContainer = document.getElementById('timer-container');
+    const timerClock = document.getElementById('timer-clock');
+    const gridMatrix = document.getElementById('grid-matrix');
+
+    // INITIALIZATION & MODE SELECTION
+    radioPractice.addEventListener('change', () => updateModeUI('practice'));
+    radioExam.addEventListener('change', () => updateModeUI('exam'));
+
+    function updateModeUI(mode) {
+      currentMode = mode;
+      if (mode === 'practice') {
+        labelPractice.className = "relative flex flex-col p-5 bg-white border-2 border-emerald-500 rounded-2xl cursor-pointer shadow-sm hover:bg-slate-50 transition";
+        labelExam.className = "relative flex flex-col p-5 bg-white border-2 border-slate-200 rounded-2xl cursor-pointer hover:bg-slate-50 transition";
+        indicatorPractice.className = "absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-emerald-500 flex items-center justify-center bg-emerald-500 text-white text-xs font-bold";
+        indicatorPractice.innerHTML = "✓";
+        indicatorExam.className = "absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-slate-300";
+        indicatorExam.innerHTML = "";
+      } else {
+        labelExam.className = "relative flex flex-col p-5 bg-white border-2 border-emerald-500 rounded-2xl cursor-pointer shadow-sm hover:bg-slate-50 transition";
+        labelPractice.className = "relative flex flex-col p-5 bg-white border-2 border-slate-200 rounded-2xl cursor-pointer hover:bg-slate-50 transition";
+        indicatorExam.className = "absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-emerald-500 flex items-center justify-center bg-emerald-500 text-white text-xs font-bold";
+        indicatorExam.innerHTML = "✓";
+        indicatorPractice.className = "absolute top-4 right-4 w-5 h-5 rounded-full border-2 border-slate-300";
+        indicatorPractice.innerHTML = "";
+      }
+    }
+
+    // START TEST ACTIONS
+    btnStartTest.addEventListener('click', () => {
+      landingScreen.classList.add('hidden');
+      testScreen.classList.remove('hidden');
+      
+      currentModeBadge.innerHTML = currentMode === 'practice' ? "🧪 Practice Mode" : "⏱️ Timed Exam";
+      currentModeBadge.className = currentMode === 'practice' 
+        ? "px-3 py-1 rounded-full text-xs font-bold uppercase bg-emerald-100 text-emerald-800" 
+        : "px-3 py-1 rounded-full text-xs font-bold uppercase bg-amber-100 text-amber-800";
+
+      if (currentMode === 'exam') {
+        timerContainer.classList.remove('hidden');
+        timerContainer.classList.add('flex');
+        startTimer();
+      } else {
+        timerContainer.classList.add('hidden');
+        timerContainer.classList.remove('flex');
+      }
+
+      buildGridMatrix();
+      loadQuestion(0);
+    });
+
+    // TIMER SYSTEM
+    function startTimer() {
+      timeRemaining = 3600; // 60 min
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerDisplay();
+        if (timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          submitExamGraded(true); // Auto-submit when time is up
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const mins = Math.floor(timeRemaining / 60);
+      const secs = timeRemaining % 60;
+      timerClock.innerHTML = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      if (timeRemaining < 300) { // 5 minutes remaining
+        timerContainer.className = "flex items-center gap-2 text-red-600 font-bold bg-red-50 px-4 py-2 rounded-xl border border-red-200 animate-pulse";
+      } else {
+        timerContainer.className = "flex items-center gap-2 text-slate-700 font-bold bg-slate-100 px-4 py-2 rounded-xl border border-slate-200";
+      }
+    }
+
+    // CONSTRUCT GRID NAVIGATION
+    function buildGridMatrix() {
+      gridMatrix.innerHTML = '';
+      questions.forEach((q, idx) => {
+        const btn = document.createElement('button');
+        btn.id = `grid-btn-${idx}`;
+        btn.innerHTML = q.id;
+        btn.className = getGridBtnClass(idx);
+        btn.addEventListener('click', () => {
+          if (!isSubmitted) {
+            loadQuestion(idx);
+          }
+        });
+        gridMatrix.appendChild(btn);
+      });
+    }
+
+    function getGridBtnClass(idx) {
+      const q = questions[idx];
+      let base = "w-10 h-10 rounded-lg text-xs font-bold transition flex items-center justify-center ";
+      
+      if (idx === currentQuestionIndex) {
+        base += "ring-2 ring-emerald-500 ring-offset-2 ";
+      }
+
+      if (flaggedQuestions[q.id]) {
+        return base + "bg-amber-500 text-white shadow-sm shadow-amber-500/20";
+      }
+      if (userAnswers[q.id] !== undefined) {
+        return base + "bg-emerald-600 text-white shadow-sm shadow-emerald-600/20";
+      }
+      return base + "bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200/50";
+    }
+
+    function updateGridStatus() {
+      questions.forEach((_, idx) => {
+        const btn = document.getElementById(`grid-btn-${idx}`);
+        if (btn) {
+          btn.className = getGridBtnClass(idx);
+        }
+      });
+    }
+
+    // LOAD QUESTION WORKSPACE
+    function loadQuestion(index) {
+      currentQuestionIndex = index;
+      const q = questions[index];
+
+      lblQuestionNum.innerHTML = q.id;
+      boxQuestionText.innerHTML = q.text;
+      domainCategoryDisplay.innerHTML = q.domain;
+
+      // Handle Flag Status UI
+      if (flaggedQuestions[q.id]) {
+        iconFlag.innerHTML = "🚩";
+        lblFlagText.innerHTML = "Flagged for Review";
+        lblFlagText.className = "text-amber-600 font-bold text-xs";
+      } else {
+        iconFlag.innerHTML = "🏳️";
+        lblFlagText.innerHTML = "Flag for Review";
+        lblFlagText.className = "text-slate-500 text-xs";
+      }
+
+      // Generate Options list
+      optionsContainer.innerHTML = '';
+      Object.entries(q.options).forEach(([code, text]) => {
+        const isSelected = userAnswers[q.id] === code;
+        const optionBtn = document.createElement('button');
+        optionBtn.className = getOptionStyle(q, code, isSelected);
+        
+        // Let's create option interior
+        let optionContent = `
+          <span class="flex items-center justify-center w-8 h-8 rounded-lg font-bold text-sm transition-colors ${getOptionIndicatorStyle(q, code, isSelected)}">
+            ${code}
+          </span>
+          <span class="text-slate-700 text-sm sm:text-base font-medium text-left leading-relaxed flex-1">${text}</span>
+        `;
+        
+        optionBtn.innerHTML = optionContent;
+        
+        if (!isSubmitted) {
+          optionBtn.addEventListener('click', () => selectOption(q.id, code));
+        }
+        optionsContainer.appendChild(optionBtn);
+      });
+
+      // Handle explanation visibility in practice mode
+      if (currentMode === 'practice' && userAnswers[q.id] !== undefined) {
+        explanationBox.classList.remove('hidden');
+        explanationText.innerHTML = q.explanation;
+      } else {
+        explanationBox.classList.add('hidden');
+      }
+
+      // Prev/Next Button visibility
+      btnPrev.disabled = index === 0;
+      btnPrev.className = index === 0 
+        ? "px-5 py-2.5 border border-slate-100 rounded-xl text-slate-300 font-semibold text-sm cursor-not-allowed"
+        : "px-5 py-2.5 border border-slate-200 rounded-xl text-slate-600 font-semibold hover:bg-slate-50 text-sm transition";
+
+      btnNext.innerHTML = index === questions.length - 1 ? "Submit Test" : "Next →";
+
+      // Render KaTeX Formulas after inject
+      try {
+        if (typeof renderMathInElement === 'function') {
+          renderMathInElement(boxQuestionText, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+          });
+          renderMathInElement(optionsContainer, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+          });
+          renderMathInElement(explanationBox, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+          });
+        }
+      } catch (err) {
+        console.error("KaTeX rendering error: ", err);
+      }
+
+      updateGridStatus();
+      updateProgressCount();
+    }
+
+    // OPTION DYNAMIC STYLING
+    function getOptionStyle(q, code, isSelected) {
+      const base = "flex items-start gap-4 w-full p-4 rounded-xl border text-left transition transform duration-150 active:scale-[0.99] ";
+      
+      if (currentMode === 'practice' && userAnswers[q.id] !== undefined) {
+        // Explanations/Answers revealed
+        if (code === q.correct) {
+          return base + "bg-emerald-50 border-emerald-400 ring-1 ring-emerald-400";
+        }
+        if (isSelected && code !== q.correct) {
+          return base + "bg-red-50 border-red-300 ring-1 ring-red-300";
+        }
+        return base + "bg-white border-slate-200 opacity-70";
+      }
+
+      // Standard Unsubmitted / Exam Mode Style
+      if (isSelected) {
+        return base + "bg-emerald-50 border-emerald-500 ring-2 ring-emerald-500/20 shadow-sm";
+      }
+      return base + "bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50/50";
+    }
+
+    function getOptionIndicatorStyle(q, code, isSelected) {
+      if (currentMode === 'practice' && userAnswers[q.id] !== undefined) {
+        if (code === q.correct) {
+          return "bg-emerald-600 text-white";
+        }
+        if (isSelected && code !== q.correct) {
+          return "bg-red-600 text-white";
+        }
+        return "bg-slate-100 text-slate-400";
+      }
+
+      if (isSelected) {
+        return "bg-emerald-600 text-white";
+      }
+      return "bg-slate-100 text-slate-500 group-hover:bg-slate-200";
+    }
+
+    // INTERACTIVE ACTIONS
+    function selectOption(questionId, code) {
+      // In practice mode, lock answers once chosen to encourage analytical reading
+      if (currentMode === 'practice' && userAnswers[questionId] !== undefined) {
+        return;
+      }
+
+      userAnswers[questionId] = code;
+      loadQuestion(currentQuestionIndex);
+    }
+
+    // FLAG FOR REVIEW TOGGLE
+    btnFlag.addEventListener('click', () => {
+      const q = questions[currentQuestionIndex];
+      flaggedQuestions[q.id] = !flaggedQuestions[q.id];
+      loadQuestion(currentQuestionIndex);
+    });
+
+    // PROGRESS UPDATE
+    function updateProgressCount() {
+      const totalAnswered = Object.keys(userAnswers).length;
+      progressText.innerHTML = `${totalAnswered}/50`;
+    }
+
+    // NAVIGATION CONTROLS
+    btnPrev.addEventListener('click', () => {
+      if (currentQuestionIndex > 0) {
+        loadQuestion(currentQuestionIndex - 1);
+      }
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (currentQuestionIndex < questions.length - 1) {
+        loadQuestion(currentQuestionIndex + 1);
+      } else {
+        // Last question triggers early submit modal
+        triggerSubmitModal();
+      }
+    });
+
+    btnSubmitEarly.addEventListener('click', triggerSubmitModal);
+
+    // MODAL CONTROL
+    function triggerSubmitModal() {
+      const totalAnswered = Object.keys(userAnswers).length;
+      const totalFlagged = Object.keys(flaggedQuestions).filter(k => flaggedQuestions[k]).length;
+
+      document.getElementById('modal-solved-count').innerHTML = `${totalAnswered} / 50`;
+      document.getElementById('modal-flagged-count').innerHTML = totalFlagged;
+
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 50);
+    }
+
+    document.getElementById('btn-modal-cancel').addEventListener('click', closeModal);
+    function closeModal() {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 150);
+    }
+
+    document.getElementById('btn-modal-confirm').addEventListener('click', () => {
+      closeModal();
+      submitExamGraded(false);
+    });
+
+    // SYSTEM ASSESSMENT & SUBMISSION
+    function submitExamGraded(isTimeout = false) {
+      isSubmitted = true;
+      clearInterval(timerInterval);
+
+      // Hide active test workspace, reveal results
+      testScreen.classList.add('hidden');
+      resultsScreen.classList.remove('hidden');
+
+      // Score computations (+1.0 for Correct, -0.25 for incorrect)
+      let score = 0;
+      let correctCount = 0;
+      let incorrectCount = 0;
+      let skippedCount = 0;
+
+      // Group scores by domain for radar analytics
+      const domainStats = {
+        "Domain I: Agriculture": { total: 0, correct: 0 },
+        "Domain II: Horticulture and Forestry": { total: 0, correct: 0 },
+        "Domain III: Animal Husbandry and Poultry": { total: 0, correct: 0 },
+        "Domain IV: Fisheries, Engineering, and Post-Harvest": { total: 0, correct: 0 },
+        "Domain V: Rural Development & Government Schemes": { total: 0, correct: 0 }
+      };
+
+      questions.forEach(q => {
+        const uAns = userAnswers[q.id];
+        
+        // Initialize domain counters
+        if (domainStats[q.domain]) {
+          domainStats[q.domain].total++;
+        }
+
+        if (uAns === undefined) {
+          skippedCount++;
+        } else if (uAns === q.correct) {
+          correctCount++;
+          score += 1.0;
+          if (domainStats[q.domain]) {
+            domainStats[q.domain].correct++;
+          }
+        } else {
+          incorrectCount++;
+          score -= 0.25;
+        }
+      });
+
+      // Keep score bound safely (minimum 0)
+      const displayScore = Math.max(0, score).toFixed(2);
+      const totalAnswers = Object.keys(userAnswers).length;
+      const accuracy = totalAnswers > 0 ? Math.round((correctCount / totalAnswers) * 100) : 0;
+
+      // Display main reports
+      document.getElementById('results-score').innerHTML = `${displayScore} <span class="text-xs text-slate-400">/ 50</span>`;
+      document.getElementById('results-accuracy').innerHTML = `${accuracy}%`;
+      document.getElementById('results-skipped').innerHTML = skippedCount;
+
+      // Calculate time taken
+      if (currentMode === 'exam') {
+        const elapsed = startTime - timeRemaining;
+        const elapsedMins = Math.floor(elapsed / 60);
+        const elapsedSecs = elapsed % 60;
+        document.getElementById('results-duration').innerHTML = `${String(elapsedMins).padStart(2, '0')}:${String(elapsedSecs).padStart(2, '0')}`;
+      } else {
+        document.getElementById('results-duration').innerHTML = "N/A <span class='text-[10px] text-slate-400'>(Practice)</span>";
+      }
+
+      // Evaluation Feedback dynamic parsing
+      const feedbackEl = document.getElementById('assessment-feedback');
+      if (score >= 40) {
+        feedbackEl.innerHTML = "🌟 <strong>Outstanding!</strong> You have demonstrated flawless comprehension. Your performance represents a high-caliber capability capable of acing the NABARD ARD cut-offs.";
+        feedbackEl.className = "max-w-2xl mx-auto mb-4 bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-sm text-emerald-800 text-left";
+      } else if (score >= 25) {
+        feedbackEl.innerHTML = "📈 <strong>Good Effort!</strong> Your performance indicates strong competency across major chapters. Target the minor schemes in Domain V and check specific equations in agricultural engineering to boost accuracy.";
+        feedbackEl.className = "max-w-2xl mx-auto mb-4 bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800 text-left";
+      } else {
+        feedbackEl.innerHTML = "🌾 <strong>Keep Practising!</strong> ARD is a highly factual segment. Use the 'Practice & Review' mode to systematically read the detailed explanations behind soil mechanics, forestry policies, and livestock management.";
+        feedbackEl.className = "max-w-2xl mx-auto mb-4 bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 text-left";
+      }
+
+      // Build Domain Competency Bars
+      const barsContainer = document.getElementById('domain-competency-bars');
+      barsContainer.innerHTML = '';
+      Object.entries(domainStats).forEach(([domainName, data]) => {
+        const pct = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
+        
+        let colorClass = "bg-emerald-500";
+        if (pct < 50) colorClass = "bg-red-500";
+        else if (pct < 75) colorClass = "bg-amber-500";
+
+        const barHtml = `
+          <div>
+            <div class="flex justify-between items-center text-xs sm:text-sm font-bold text-slate-700 mb-1">
+              <span>${domainName}</span>
+              <span>${pct}% (${data.correct}/${data.total})</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-3.5 overflow-hidden border border-slate-200/50">
+              <div class="${colorClass} h-full transition-all duration-1000" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+        barsContainer.insertAdjacentHTML('beforeend', barHtml);
+      });
+
+      // Prepare comprehensive Solved Sheet view
+      compileSolvedSheet();
+    }
+
+    // COMPILE THE FULL COMPREHENSIVE SOLVED SHEET (ACCORDION STYLE)
+    function compileSolvedSheet() {
+      const container = document.getElementById('solutions-list-container');
+      container.innerHTML = '';
+
+      questions.forEach((q, idx) => {
+        const uAns = userAnswers[q.id];
+        const isCorrect = uAns === q.correct;
+        
+        let statusCardStyle = "border-slate-100 bg-white";
+        let statusBadge = `<span class="px-2.5 py-1 rounded bg-slate-100 text-slate-500 text-xs font-bold uppercase">Skipped</span>`;
+
+        if (uAns !== undefined) {
+          if (isCorrect) {
+            statusCardStyle = "border-emerald-200 bg-emerald-50/20";
+            statusBadge = `<span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-xs font-bold uppercase">✓ Correct</span>`;
+          } else {
+            statusCardStyle = "border-red-100 bg-red-50/10";
+            statusBadge = `<span class="px-2.5 py-1 rounded bg-red-100 text-red-800 text-xs font-bold uppercase">✗ Incorrect</span>`;
+          }
+        }
+
+        const solutionCard = document.createElement('div');
+        solutionCard.className = `p-6 rounded-2xl border shadow-sm ${statusCardStyle}`;
+        
+        // Formulate options overview
+        let optionsHtml = '';
+        Object.entries(q.options).forEach(([code, text]) => {
+          let optionStyle = "border-slate-100 bg-slate-50 text-slate-700";
+          if (code === q.correct) {
+            optionStyle = "border-emerald-300 bg-emerald-100/50 text-emerald-900 font-bold";
+          } else if (uAns === code && code !== q.correct) {
+            optionStyle = "border-red-200 bg-red-100/50 text-red-900";
+          }
+          optionsHtml += `
+            <div class="flex items-center gap-3 p-3 rounded-xl border text-xs sm:text-sm ${optionStyle}">
+              <span class="w-6 h-6 rounded bg-black/5 flex items-center justify-center font-bold text-xs">${code}</span>
+              <span>${text}</span>
+            </div>
+          `;
+        });
+
+        solutionCard.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-slate-900 text-base">Q${q.id}</span>
+              <span class="text-xs text-slate-400 font-semibold">${q.domain}</span>
+            </div>
+            ${statusBadge}
+          </div>
+          <div class="text-slate-800 text-sm sm:text-base font-semibold leading-relaxed mb-4">${q.text}</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+            ${optionsHtml}
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <span class="font-bold text-emerald-800 flex items-center gap-1 mb-1">
+              <span>💡</span> Correct Option: (${q.correct})
+            </span>
+            ${q.explanation}
+          </div>
+        `;
+
+        container.appendChild(solutionCard);
+      });
+
+      // Trigger Math Rendering on entire review sheet
+      try {
+        if (typeof renderMathInElement === 'function') {
+          renderMathInElement(container, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+          });
+        }
+      } catch (err) {
+        console.error("KaTeX compile solved sheet error: ", err);
+      }
+    }
+
+    // ACCORDION SOLUTIONS DISCLOSURE TOGGLE
+    const btnShowSolutions = document.getElementById('btn-show-solutions');
+    const fullSolutionsSection = document.getElementById('full-solutions-section');
+    btnShowSolutions.addEventListener('click', () => {
+      fullSolutionsSection.classList.toggle('hidden');
+      if (!fullSolutionsSection.classList.contains('hidden')) {
+        btnShowSolutions.innerHTML = "🔼 Hide Answer Sheet";
+        // Smooth scroll to the solutions section
+        fullSolutionsSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        btnShowSolutions.innerHTML = "🔍 Review Full Answer Sheet";
+      }
+    });
+
+    // RESTART TEST SYSTEM
+    document.getElementById('btn-restart-from-results').addEventListener('click', () => {
+      // Clear variables
+      userAnswers = {};
+      flaggedQuestions = {};
+      isSubmitted = false;
+      timeRemaining = 3600;
+
+      // Hide panels
+      resultsScreen.classList.add('hidden');
+      fullSolutionsSection.classList.add('hidden');
+      btnShowSolutions.innerHTML = "🔍 Review Full Answer Sheet";
+
+      // Show configurations screen
+      landingScreen.classList.remove('hidden');
+    });
+
+  </script>
 </body>
 </html>
