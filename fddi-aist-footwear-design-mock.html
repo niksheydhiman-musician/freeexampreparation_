@@ -1,150 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>body{font-family:'Nunito',sans-serif;} .font-display{font-family:'Playfair Display',serif;}</style>
-  <title>FDDI AIST Footwear Design & Leather Goods Interactive Mock Test | Free Exam Preparation</title>
-  <meta name="description" content="Practice FDDI AIST Footwear Design & Leather Goods with interactive MCQs, instant option selection, and step-by-step explanations.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Des. Footwear Design & Technology - Interactive Mock Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcfbfa;
+        }
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col">
-  <!-- ── HEADER ── -->
-  <header class="sticky top-0 z-50 bg-slate-900 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-3">
-        <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal-500 text-slate-900 font-bold text-lg select-none">✏️</span>
-        <span class="text-white font-display text-lg leading-tight">Free<span class="text-teal-400">Exam</span>Prep</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
-        <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
-        <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="design-architecture-hub#mock-tests" class="hover:text-teal-400 transition-colors">Mock Tests</a>
-        <a href="design-architecture-hub#pyq-papers" class="hover:text-teal-400 transition-colors">PYQ Papers</a>
-        <a href="blog" class="hover:text-teal-400 transition-colors">Blog</a>
-      </nav>
-      <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-teal-300 bg-teal-900/50 border border-teal-700 rounded-full px-3 py-1">✓ 100% Free</span>
-      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </header>
-<!-- ── MOBILE MENU ── -->
-<div id="mobile-menu" class="hidden bg-slate-800 border-t border-slate-700 md:hidden">
-  <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-semibold text-slate-300">
-    <a href="/" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Home</a>
-    <a href="design-architecture-hub" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Exam Repository</a>
-    <a href="design-architecture-hub#mock-tests" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Mock Tests</a>
-    <a href="design-architecture-hub#pyq-papers" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">PYQ Papers</a>
-    <a href="blog" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Blog</a>
-  </nav>
-</div>
-<script>
-  (function(){
-    var btn = document.getElementById('mobile-menu-btn');
-    var menu = document.getElementById('mobile-menu');
-    if(btn && menu){
-      btn.addEventListener('click', function(){
-        var nowOpen = menu.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(nowOpen));
-      });
-      menu.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          menu.classList.add('hidden');
-          btn.setAttribute('aria-expanded','false');
-        });
-      });
-    }
-  })();
-</script>
+<body class="text-stone-800 antialiased min-h-screen flex flex-col">
 
-  <div class="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-sm">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-sm">
-      <h1 class="font-bold text-slate-900">FDDI AIST Footwear Design & Leather Goods — Interactive Mock Test</h1>
-      <p class="text-slate-500 font-medium">⏳ 45 Minutes • 50 Marks • 2 Sample MCQs</p>
-    </div>
-  </div>
-
-  <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8 space-y-6">
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q1">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 1</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">In FDDI AIST Footwear Design & Leather Goods, which practice strategy improves score reliability the most in limited time?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Memorize only final answers from previous papers</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Solve topic-wise timed sets and analyze mistakes immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip revision and attempt full mocks only</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt random questions without tracking weak areas</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Build a timed routine close to real exam pressure.</p>
-          <p><strong>Step 2:</strong> Mark conceptual and silly errors separately.</p>
-          <p><strong>Step 3:</strong> Revise weak topics and reattempt wrong questions.</p>
-          <p><strong>Correct Option:</strong> Solve topic-wise timed sets and analyze mistakes immediately.</p>
+    <header class="border-b border-stone-200 bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-amber-700 rounded flex items-center justify-center text-white font-bold text-sm tracking-tighter">FD</div>
+                <div>
+                    <span class="heading-font font-bold tracking-tight text-stone-900">B.Des. Footwear</span>
+                    <span class="text-xs block text-stone-500 leading-none">Curriculum Examination Hub</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div id="test-timer" class="bg-stone-100 text-stone-700 font-mono px-3 py-1.5 rounded-md text-sm border border-stone-200">
+                    Time: 00:00
+                </div>
+                <div class="text-xs font-semibold uppercase tracking-wider bg-amber-50 text-amber-800 px-2.5 py-1 rounded border border-amber-200">
+                    IIT-D Aligned
+                </div>
+            </div>
         </div>
-      </details>
-    </section>
+    </header>
 
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q2">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 2</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">For FDDI AIST Footwear Design & Leather Goods, what is the best order during a timed mock to maximize accuracy and completion?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Start with the hardest section and stay there till completion</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt medium and easy questions first, then return to complex ones</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Leave no time for review and submit immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip instructions and guess unanswered questions</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Secure easy and medium questions quickly for stable score accumulation.</p>
-          <p><strong>Step 2:</strong> Reserve remaining time for difficult or calculation-heavy items.</p>
-          <p><strong>Step 3:</strong> Keep 3-5 minutes for review of marked questions.</p>
-          <p><strong>Correct Option:</strong> Attempt medium and easy questions first, then return to complex ones.</p>
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <div class="bg-stone-900 text-stone-100 p-6 sm:p-8 rounded-2xl mb-8 border border-stone-800 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-16 -bottom-16 w-48 h-48 bg-amber-700/20 rounded-full blur-2xl"></div>
+            <div class="relative z-10 max-w-3xl">
+                <span class="text-xs uppercase tracking-widest font-semibold text-amber-400 bg-amber-950/50 px-2.5 py-1 rounded border border-amber-800/60">Academic Assessment</span>
+                <h1 class="heading-font text-2xl sm:text-3xl font-bold tracking-tight text-white mt-3 mb-2">Interactive Comprehensive Mock Test</h1>
+                <p class="text-stone-400 text-sm sm:text-base leading-relaxed">
+                    This evaluative engine tests your mastery across advanced footwear pedagogy: Design Thinking, Biomechanics, Smart Wearable Electronics, MRP/ERP Logistics, and High-Performance Athleisure Engineering.
+                </p>
+            </div>
         </div>
-      </details>
-    </section>
 
-    <div class="text-center">
-      <a href="fddi-aist-footwear-design-pyq" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Review 10-Year PYQs</a>
-    </div>
-  </main>
+        <div id="setup-dashboard" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-xs">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Total Items Available</h3>
+                <p class="text-3xl font-bold text-stone-900 heading-font">10 Questions</p>
+                <span class="text-xs text-stone-500">Core Industrial Modules</span>
+            </div>
+            <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-xs">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">Target Parameters</h3>
+                <p class="text-3xl font-bold text-stone-900 heading-font">4 Pillars</p>
+                <span class="text-xs text-stone-500">Design, Materials, Biomechanics, Business</span>
+            </div>
+            <div class="bg-white p-5 rounded-xl border border-stone-200 shadow-xs flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-1">System Status</h3>
+                    <p id="progress-text" class="text-sm font-semibold text-stone-700">Test initialized. Ready for evaluation.</p>
+                </div>
+                <div class="w-full bg-stone-100 rounded-full h-2 mt-2">
+                    <div id="progress-bar" class="bg-amber-700 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
 
-  <!-- ── FOOTER ── -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-10">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
-      <div>
-        <a href="/" class="flex items-center gap-2 mb-3">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-slate-900 font-bold">✏️</span>
-          <span class="text-white font-semibold text-sm">FreeExamPrep</span>
-        </a>
-        <p>© 2026 FreeExamPreparation.com</p>
-      </div>
-      <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm">
-        <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
-        <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="nift-creative-ability-pyq" class="hover:text-teal-400 transition-colors">NIFT PYQs</a>
-        <a href="nid-dat-design-principles-pyq" class="hover:text-teal-400 transition-colors">NID DAT PYQs</a>
-        <a href="ceed-design-thinking-creativity-pyq" class="hover:text-teal-400 transition-colors">CEED PYQs</a>
-        <a href="mitid-dat-design-aptitude-pyq" class="hover:text-teal-400 transition-colors">MITID DAT PYQs</a>
-        <a href="seed-symbiosis-design-pyq" class="hover:text-teal-400 transition-colors">SEED PYQs</a>
-      </div>
-    </div>
-  </footer>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <div class="lg:col-span-1 space-y-4">
+                <div class="bg-white p-4 rounded-xl border border-stone-200 sticky top-24 shadow-xs">
+                    <h2 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Question Matrix</h2>
+                    <div class="grid grid-cols-5 gap-2" id="nav-matrix-grid">
+                        </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-500">
+                        <div class="flex items-center"><span class="w-3 h-3 bg-stone-100 border border-stone-300 rounded mr-2 inline-block"></span> Unvisited</div>
+                        <div class="flex items-center"><span class="w-3 h-3 bg-stone-900 rounded mr-2 inline-block"></span> Active Position</div>
+                        <div class="flex items-center"><span class="w-3 h-3 bg-amber-700 rounded mr-2 inline-block"></span> Answered</div>
+                    </div>
+
+                    <button id="submit-exam-btn" class="w-full mt-6 bg-stone-900 text-white font-medium text-sm py-2.5 px-4 rounded-lg hover:bg-stone-800 transition shadow-sm hidden">
+                        Submit Examination
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <div id="question-card-container" class="bg-white p-6 sm:p-8 rounded-xl border border-stone-200 shadow-xs transition-opacity duration-200">
+                    </div>
+
+                <div id="results-dashboard" class="hidden mt-8 bg-white p-6 sm:p-8 rounded-xl border-2 border-stone-900 shadow-md">
+                    <h2 class="heading-font text-xl font-bold text-stone-900 mb-4 flex items-center">
+                        <span class="w-2 h-5 bg-amber-700 inline-block mr-2 rounded-xs"></span>
+                        Performance Diagnostics Overview
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+                            <span class="text-xs font-semibold uppercase text-stone-500 tracking-wider">Metric Score</span>
+                            <p id="score-metric" class="text-3xl font-bold text-stone-900 mt-1">0/0</p>
+                        </div>
+                        <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+                            <span class="text-xs font-semibold uppercase text-stone-500 tracking-wider">Accuracy Percentage</span>
+                            <p id="accuracy-metric" class="text-3xl font-bold text-stone-900 mt-1">0%</p>
+                        </div>
+                        <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+                            <span class="text-xs font-semibold uppercase text-stone-500 tracking-wider">Evaluation Result</span>
+                            <p id="grading-metric" class="text-sm font-bold text-amber-800 mt-2 uppercase tracking-wide">Pending</p>
+                        </div>
+                    </div>
+                    <button onclick="window.location.reload()" class="bg-stone-100 hover:bg-stone-200 text-stone-800 font-medium text-xs px-4 py-2 rounded-md transition border border-stone-300">
+                        Reset Application & Retake Test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-stone-200 mt-16 py-6 text-center text-xs text-stone-500">
+        <div class="max-w-7xl mx-auto px-4">
+            Bachelor of Design (B.Des.) Footwear Engineering Assessment Platform • Industry & IIT-D Syllabus Integration.
+        </div>
+    </footer>
+
+    <script>
+        const quizData = [
+            {
+                "questionNumber": 1,
+                "category": "Design Thinking & Pedagogy",
+                "question": "In footwear design thinking, which phase of the double-diamond model focuses on synthesizing user insights gathered during empathy research into an actionable problem statement?",
+                "choices": ["Discover", "Define", "Develop", "Deliver"],
+                "correctIndex": 1,
+                "rationales": [
+                    "The discover phase is dedicated to divergent research and broad information gathering rather than narrowing down into a precise problem statement.",
+                    "The define phase involves convergent thinking to filter research findings, establish insights, and formulate a clear, actionable project brief.",
+                    "The develop phase focuses on ideation, prototyping, and exploring diverse design solutions rather than setting the initial problem boundaries.",
+                    "The deliver phase centers on testing, finalizing production details, and launching the product rather than scoping the initial user problem."
+                ],
+                "hint": "Think about the stage where you move from broad user observation to a narrow, focused design brief."
+            },
+            {
+                "questionNumber": 2,
+                "category": "Biomechanics & Health",
+                "question": "Which biomechanical parameters are primarily measured using an in-shoe plantar pressure mapping system during a dynamic gait analysis?",
+                "choices": [
+                    "Joint angular velocity and kinematic progression",
+                    "Ground reaction force vectors and center of mass acceleration",
+                    "Force-time integrals and localized vertical stress distribution across anatomical zones",
+                    "Electromyographical activity of the tibialis anterior muscle"
+                ],
+                "correctIndex": 2,
+                "rationales": [
+                    "Kinematic measurements typically require optical motion capture cameras rather than sensory pressure insoles.",
+                    "These metrics are generally calculated using dynamic force plates embedded in a walkway rather than direct flexible in-shoe sensors.",
+                    "In-shoe pressure matrices are uniquely capable of isolating localized vertical force and pressure changes over time beneath specific regions like the metatarsal heads.",
+                    "Muscle activity measurements require surface electromyography (sEMG) sensors placed on the skin, not pressure sensors inside the shoe."
+                ],
+                "hint": "Consider what specific data flexible, matrixed sensor grids placed directly underneath the foot can capture during motion."
+            },
+            {
+                "questionNumber": 3,
+                "category": "Digital Manufacturing & Logistics",
+                "question": "When configuring Material Requirements Planning (MRP) parameters for an automated sneaker manufacturing line, which data point serves as the foundational input determining net component requirements?",
+                "choices": [
+                    "Bill of Materials (BOM)",
+                    "Master Production Schedule (MPS)",
+                    "Inventory Status Records",
+                    "Capacity Requirements Plan"
+                ],
+                "correctIndex": 1,
+                "rationales": [
+                    "While the BOM details the product architecture, it must be driven by the Master Production Schedule to calculate active raw material quantities.",
+                    "The MPS specifies exactly what products need to be built and when, acting as the primary driver that the MRP system deconstructs into material needs.",
+                    "Inventory records are subtracted from gross requirements during the calculation, but they do not establish the original baseline demand.",
+                    "Capacity planning verifies labor and machinery availability rather than establishing the core material demand matrix."
+                ],
+                "hint": "Identify the core schedule that outlines the final volume and timing of completed footwear products before materials are ordered."
+            },
+            {
+                "questionNumber": 4,
+                "category": "Technology, Materials & Processes",
+                "question": "In the construction of high-performance athletic footwear, what is the primary structural benefit of deploying a thermoplastic polyurethane (TPU) shank in the midfoot region?",
+                "choices": [
+                    "Maximizing impact absorption at initial heel strike",
+                    "Torsional rigidity and controlled energy return during the propulsion phase",
+                    "Increasing the coefficient of friction on wet synthetic surfaces",
+                    "Enhancing the breathability and microclimate management of the upper mesh"
+                ],
+                "correctIndex": 1,
+                "rationales": [
+                    "Shock absorption at heel strike is typically managed by softer EVA or polyurethane midsoles, not rigid structural shanks.",
+                    "A rigid midfoot shank stabilizes the longitudinal arch, prevents excessive twisting (torsion), and aids in energy transfer as the foot transitions to toe-off.",
+                    "Friction coefficients are dictated by the rubber compounding and tread patterns of the outsole, not midfoot structural inserts.",
+                    "Shanks are internal or bottom-mounted mechanical components that have no impact on the airflow characteristics of the upper fabric."
+                ],
+                "hint": "Focus on the physical stabilization needed when the midfoot undergoes twisting forces during rapid directional shifts."
+            },
+            {
+                "questionNumber": 5,
+                "category": "Emerging Tech & Blockchain",
+                "question": "How does the integration of decentralized Blockchain ledger systems enhance global footwear supply chain verification?",
+                "choices": [
+                    "By dynamically compressing 3D CAD modeling assets for faster transmission",
+                    "By automatically optimizing injection molding machine cycle times using neural networks",
+                    "By establishing an immutable, serialized record of material provenance from tannery/factory to retail",
+                    "By executing automated physical quality control sorting using mechanical robotic arms"
+                ],
+                "correctIndex": 2,
+                "rationales": [
+                    "Blockchain functions as a data ledger and does not inherently alter or compress graphic design assets.",
+                    "Machine cycle times are managed by edge computing controllers and industrial PLCs, not distributed ledgers.",
+                    "Blockchain creates tamper-proof cryptographic audit trails that verify the exact point of origin, sustainable certifications, and authentic handling steps.",
+                    "Physical sorting relies on machine vision systems and robotics, whereas blockchain is strictly a software data architecture layer."
+                ],
+                "hint": "Think about the primary value of an unalterable, distributed ledger when tracking the true origin and authenticity of luxury or sustainable materials."
+            },
+            {
+                "questionNumber": 6,
+                "category": "Smart Products & Wearables",
+                "question": "Which sensor combination is essential for an IoT-enabled smart running shoe designed to measure accurate spatial-temporal metrics without relying on a continuous GPS link?",
+                "choices": [
+                    "A 6-axis Inertial Measurement Unit (IMU) comprising a triaxial accelerometer and gyroscope",
+                    "An optical photoplethysmography (PPG) sensor paired with a capacitive touch mesh",
+                    "An ambient temperature thermometer coupled with a resistive humidity probe",
+                    "A galvanic skin response sensor integrated with a piezo-electric buzzer"
+                ],
+                "correctIndex": 0,
+                "rationales": [
+                    "An IMU tracks linear acceleration and angular velocity, allowing on-board algorithms to calculate stride length, cadence, and contact time via dead reckoning.",
+                    "PPG sensors measure localized blood flow/heart rate, which does not provide spatial-temporal gait kinematics.",
+                    "These elements monitor the microclimate inside the shoe upper rather than tracking kinematic motion profiles.",
+                    "Galvanic sensors measure skin moisture/stress indicators and buzzers provide haptic alerts, failing to track motion geometries."
+                ],
+                "hint": "Look for sensors that measure movement dynamics, acceleration, and orientation shifts directly in three-dimensional space."
+            },
+            {
+                "questionNumber": 7,
+                "category": "Athleisure & Knitting Software",
+                "question": "When designing specialized athleisure footwear using computerized flat knitting machinery, what design parameter directly controls the localized elasticity and structural breathability of the single-piece upper?",
+                "choices": [
+                    "The synthetic compounding ratio of the outsole vulcanization agent",
+                    "Variations in stitch architecture, knit loops, and selective placement of elastomeric yarns",
+                    "The application profile of reactive hot-melt polyurethane films",
+                    "The feed rate speed of automatic leather clicking dies"
+                ],
+                "correctIndex": 1,
+                "rationales": [
+                    "Outsole vulcanization affects rubber properties and has zero chemical or structural relationship with the knit textile upper.",
+                    "By altering the stitch patterns (e.g., tuck stitches, open structures) and threading technical yarns, developers can program zones of high ventilation or high tension.",
+                    "Hot-melt films are applied externally post-knitting to add support structures or reinforcement, not during the programmed stitch cycle.",
+                    "Clicking dies are used for stamping out solid sheets of material like leather or synthetic sheets, which is completely distinct from stitch programming."
+                ],
+                "hint": "Consider how modern knitting software manipulates the physical loop patterns and yarn types frame-by-frame."
+            },
+            {
+                "questionNumber": 8,
+                "category": "Fabrication Techniques",
+                "question": "From an industrial engineering standpoint, what is the primary objective of implementing a Rapid Upper Prototyping process using digital 2D-to-3D flattening software?",
+                "choices": [
+                    "Eliminating the need for grading multiple sizes across the final size run",
+                    "Drastically reducing physical material sample waste and accelerating the pattern-to-sample lead time",
+                    "Replacing the chemical bonding agents used in modern sole assembly lines",
+                    "Ensuring the shoe satisfies international customs harmonized tariff codes automatically"
+                ],
+                "correctIndex": 1,
+                "rationales": [
+                    "Size grading is always mandatory for production; flattening software simply assists in generating accurate base patterns.",
+                    "Digital flattening generates highly precise 2D shell patterns from 3D digital lasts instantly, reducing manual trial-and-error iterations and cutting waste.",
+                    "Pattern flattening software deals exclusively with pattern cutting and geometric scaling, not chemical adhesion processes.",
+                    "Tariff classification is a regulatory legal matter completely separate from geometric pattern engineering software."
+                ],
+                "hint": "Think about how moving from physical paper-and-tape last masking to a digital algorithm impacts the sample modification timeline."
+            },
+            {
+                "questionNumber": 9,
+                "category": "Business, Merchandising & Retail",
+                "question": "In footwear retail operations, what does a high 'Sell-Through Rate' for a newly launched lifestyle sneaker collection indicate to merchandising analysts?",
+                "choices": [
+                    "The collection has a high inventory carrying cost relative to warehouse capacity",
+                    "A high percentage of received inventory was sold to final consumers within a specific timeframe",
+                    "The manufacturing line suffered from excessive defect rates during the lasting process",
+                    "The product has low market affinity and must be immediately marked down"
+                ],
+                "correctIndex": 1,
+                "rationales": [
+                    "Carrying cost metrics are determined by storage duration and volume, not direct customer sales metrics.",
+                    "Sell-through rate measures the volume of inventory sold relative to the total inventory allocation received from production.",
+                    "Defect rates are measured via factory floor quality assurance data, not front-end retail POS transaction metrics.",
+                    "A high sell-through rate demonstrates strong product affinity and high demand, meaning markdowns are unnecessary."
+                ],
+                "hint": "Look for a definition that compares inbound retail inventory directly against outbound customer sales velocities."
+            },
+            {
+                "questionNumber": 10,
+                "category": "Specialized Podiatric Design",
+                "question": "Which foot condition requires a specialized design intervention featuring a wide, high-volume toe box and a rigid rocker-sole profile to reduce painful joint extension?",
+                "choices": [
+                    "Calcaneal spur syndrome accompanied by severe plantar fasciitis",
+                    "Hallux Rigidus (severe degenerative arthritis of the first metatarsophalangeal joint)",
+                    "Lateral ankle instability resulting from chronic ligamentous laxity",
+                    "Flexible pes planus requiring high-density medial posting"
+                ],
+                "correctIndex": 1,
+                "rationales": [
+                    "Plantar fasciitis designs usually focus on targeted heel cushioning and deep longitudinal arch contours rather than rigid metatarsal rocker soles.",
+                    "A rigid rocker sole prevents the painful bending of the big toe joint during the propulsion phase of walking by rolling the foot forward mechanically.",
+                    "Ankle instability requires widened outriggers, flared outsoles, or supportive high-top collars rather than a rigid forefoot rocker.",
+                    "Flexible flat feet (pes planus) are corrected via supportive medial dual-density foam wedges to prevent overpronation."
+                ],
+                "hint": "Consider which joint condition benefits most from a shoe that completely prevents the forefoot from bending during toe-off."
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        let userAnswers = new Array(quizData.length).fill(null);
+        let showHints = new Array(quizData.length).fill(false);
+        let examSubmitted = false;
+        let elapsedSeconds = 0;
+
+        // Timer Execution
+        setInterval(() => {
+            if (!examSubmitted) {
+                elapsedSeconds++;
+                const mins = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
+                const secs = String(elapsedSeconds % 60).padStart(2, '0');
+                document.getElementById('test-timer').innerText = `Time: ${mins}:${secs}`;
+            }
+        }, 1000);
+
+        // UI Initialization
+        function initQuiz() {
+            renderMatrix();
+            renderQuestion(currentQuestionIdx);
+            updateProgress();
+        }
+
+        function renderMatrix() {
+            const matrixContainer = document.getElementById('nav-matrix-grid');
+            matrixContainer.innerHTML = '';
+            
+            quizData.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.innerText = q.questionNumber;
+                btn.className = `h-10 text-xs font-semibold rounded transition flex items-center justify-center border `;
+                
+                if (idx === currentQuestionIdx) {
+                    btn.className += 'bg-stone-900 text-white border-stone-900 shadow-sm';
+                } else if (userAnswers[idx] !== null) {
+                    btn.className += 'bg-amber-700 text-white border-amber-700';
+                } else {
+                    btn.className += 'bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100';
+                }
+                
+                btn.onclick = () => selectQuestion(idx);
+                matrixContainer.appendChild(btn);
+            });
+
+            // Toggle Global Submit Button Visibility
+            const answeredCount = userAnswers.filter(a => a !== null).length;
+            const submitBtn = document.getElementById('submit-exam-btn');
+            if (answeredCount > 0 && !examSubmitted) {
+                submitBtn.classList.remove('hidden');
+            }
+        }
+
+        function selectQuestion(idx) {
+            currentQuestionIdx = idx;
+            renderMatrix();
+            renderQuestion(idx);
+        }
+
+        function renderQuestion(idx) {
+            const q = quizData[idx];
+            const container = document.getElementById('question-card-container');
+            
+            let choicesHtml = '';
+            q.choices.forEach((choice, cIdx) => {
+                let btnStyle = "border-stone-200 hover:bg-stone-50 text-stone-800 bg-white";
+                let statusBadge = "";
+
+                if (examSubmitted) {
+                    if (cIdx === q.correctIndex) {
+                        btnStyle = "border-emerald-600 bg-emerald-50 text-emerald-900 font-medium";
+                        statusBadge = `<span class="text-xs bg-emerald-600 text-white px-2 py-0.5 rounded font-bold ml-auto">Correct Key</span>`;
+                    } else if (userAnswers[idx] === cIdx) {
+                        btnStyle = "border-rose-600 bg-rose-50 text-rose-900";
+                        statusBadge = `<span class="text-xs bg-rose-600 text-white px-2 py-0.5 rounded font-bold ml-auto">Your Choice</span>`;
+                    } else {
+                        btnStyle = "border-stone-200 text-stone-400 bg-stone-50/50 cursor-not-allowed";
+                    }
+                } else if (userAnswers[idx] === cIdx) {
+                    btnStyle = "border-amber-700 bg-amber-50/60 text-amber-900 font-medium ring-1 ring-amber-700";
+                }
+
+                choicesHtml += `
+                    <button onclick="makeSelection(${cIdx})" ${examSubmitted ? 'disabled' : ''} class="w-full text-left p-4 rounded-xl border text-sm sm:text-base flex items-start space-x-3 transition ${btnStyle}">
+                        <span class="w-6 h-6 rounded-full bg-stone-100 text-stone-600 text-xs font-bold flex items-center justify-center shrink-0 border border-stone-200">${String.fromCharCode(65 + cIdx)}</span>
+                        <span class="leading-relaxed flex-1">${choice}</span>
+                        ${statusBadge}
+                    </button>
+                    
+                    ${examSubmitted && (userAnswers[idx] === cIdx || cIdx === q.correctIndex) ? `
+                        <div class="text-xs px-4 py-2 bg-stone-50 rounded-lg border border-stone-200 text-stone-600 mb-2 mt-[-8px]">
+                            <strong>Rationale:</strong> ${q.rationales[cIdx]}
+                        </div>
+                    ` : ''}
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="flex items-center justify-between border-b border-stone-100 pb-4 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-2.5 py-1 rounded border border-amber-200">${q.category}</span>
+                    <span class="text-xs font-mono text-stone-400">Question ${q.questionNumber} of ${quizData.length}</span>
+                </div>
+                
+                <h2 class="heading-font text-base sm:text-lg font-bold text-stone-900 leading-snug mb-6">${q.question}</h2>
+                
+                <div class="space-y-3 mb-6">
+                    ${choicesHtml}
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+                    <button onclick="toggleHint(${idx})" class="text-xs font-semibold text-stone-500 hover:text-stone-900 flex items-center space-x-1">
+                        <span>💡</span> <span>${showHints[idx] ? 'Hide Conceptual Guide' : 'Reveal Contextual Hint'}</span>
+                    </button>
+                    
+                    <div class="flex space-x-2">
+                        <button onclick="navigate(-1)" ${idx === 0 ? 'disabled' : ''} class="px-3 py-1.5 border border-stone-300 text-xs rounded-md font-medium text-stone-700 hover:bg-stone-50 disabled:opacity-40">Previous</button>
+                        <button onclick="navigate(1)" ${idx === quizData.length - 1 ? 'disabled' : ''} class="px-3 py-1.5 border border-stone-300 text-xs rounded-md font-medium text-stone-700 hover:bg-stone-50 disabled:opacity-40">Next</button>
+                    </div>
+                </div>
+
+                ${showHints[idx] ? `
+                    <div class="mt-4 p-3 bg-amber-50/50 border border-amber-200 rounded-lg text-xs text-amber-900 leading-relaxed animate-fade-in">
+                        <strong>Theoretical Context Hint:</strong> ${q.hint}
+                    </div>
+                ` : ''}
+            `;
+        }
+
+        function makeSelection(choiceIdx) {
+            if (examSubmitted) return;
+            userAnswers[currentQuestionIdx] = choiceIdx;
+            renderMatrix();
+            renderQuestion(currentQuestionIdx);
+            updateProgress();
+        }
+
+        function toggleHint(idx) {
+            showHints[idx] = !showHints[idx];
+            renderQuestion(idx);
+        }
+
+        function navigate(dir) {
+            const target = currentQuestionIdx + dir;
+            if (target >= 0 && target < quizData.length) {
+                selectQuestion(target);
+            }
+        }
+
+        function updateProgress() {
+            const answered = userAnswers.filter(a => a !== null).length;
+            const pct = (answered / quizData.length) * 100;
+            document.getElementById('progress-bar').style.width = `${pct}%`;
+            document.getElementById('progress-text').innerText = `${answered} of ${quizData.length} modules structured.`;
+        }
+
+        // Exam Evaluation Engine Submission Process
+        document.getElementById('submit-exam-btn').onclick = function() {
+            const totalAnswered = userAnswers.filter(a => a !== null).length;
+            if (totalAnswered < quizData.length) {
+                if (!confirm(`You have only structured ${totalAnswered} out of ${quizData.length} solutions. Proceed to final grading execution?`)) {
+                    return;
+                }
+            }
+
+            examSubmitted = true;
+            this.classList.add('hidden');
+            
+            // Calculate Performance Score Matrices
+            let score = 0;
+            quizData.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correctIndex) {
+                    score++;
+                }
+            });
+
+            const accuracy = Math.round((score / quizData.length) * 100);
+            
+            // Populate Metrics Elements
+            document.getElementById('score-metric').innerText = `${score} / ${quizData.length}`;
+            document.getElementById('accuracy-metric').innerText = `${accuracy}%`;
+            
+            let grade = "";
+            if (accuracy >= 90) grade = "Elite Merit: Industrial Ready";
+            else if (accuracy >= 70) grade = "Pass Matrix: Satisfactory Competency";
+            else grade = "Re-evaluation Recommended: Deep Study Required";
+            
+            document.getElementById('grading-metric').innerText = grade;
+            document.getElementById('results-dashboard').classList.remove('hidden');
+            
+            // Refresh viewport status to view results matrix
+            renderMatrix();
+            renderQuestion(currentQuestionIdx);
+            document.getElementById('results-dashboard').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Execution Launch
+        window.onload = initQuiz;
+    </script>
 </body>
 </html>
