@@ -1,131 +1,1071 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>body{font-family:'Nunito',sans-serif;} .font-display{font-family:'Playfair Display',serif;}</style>
-  <title>MITID DAT Design Aptitude Interactive Mock Test | Free Exam Preparation</title>
-  <meta name="description" content="Practice MITID DAT Design Aptitude with interactive MCQs, instant option selection, and step-by-step explanations.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MITID DAT Interactive Mock Test Portal</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-dark: #b71c1c;
+            --secondary-color: #1976d2;
+            --background-dark: #0f172a;
+            --background-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #f1f5f9;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --border-color: #cbd5e1;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--card-shadow);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .timer-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timer-container span {
+            color: var(--primary-color);
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Sidebar Navigation Grid */
+        .sidebar {
+            width: 320px;
+            background-color: white;
+            border-right: 1px solid var(--border-color);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            height: calc(100vh - 75px);
+            position: sticky;
+            top: 75px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--background-dark);
+            border-left: 3px solid var(--primary-color);
+            padding-left: 8px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+        }
+
+        .grid-item {
+            aspect-ratio: 1;
+            border: 1.5px solid var(--border-color);
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .grid-item:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(211, 47, 47, 0.05);
+        }
+
+        .grid-item.active {
+            background-color: var(--background-dark);
+            color: white;
+            border-color: var(--background-dark);
+        }
+
+        .grid-item.answered {
+            background-color: var(--accent-green);
+            color: white;
+            border-color: var(--accent-green);
+        }
+
+        .grid-item.flagged {
+            background-color: var(--accent-amber);
+            color: white;
+            border-color: var(--accent-amber);
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            max-width: 900px;
+        }
+
+        .question-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            display: none;
+        }
+
+        .question-card.active {
+            display: block;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background-color: rgba(25, 118, 210, 0.1);
+            color: var(--secondary-color);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .question-meta {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--background-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .option-label:hover {
+            background-color: var(--background-light);
+            border-color: #94a3b8;
+        }
+
+        .option-label input[type="radio"] {
+            width: 1.2rem;
+            height: 1.2rem;
+            accent-color: var(--primary-color);
+        }
+
+        .option-label.selected {
+            background-color: rgba(25, 118, 210, 0.05);
+            border-color: var(--secondary-color);
+        }
+
+        /* Action Controls */
+        .controls-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: #e2e8f0;
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: #cbd5e1;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-flag {
+            background-color: var(--accent-amber);
+            color: white;
+        }
+
+        .btn-submit {
+            background-color: var(--accent-green);
+            color: white;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background-color: #059669;
+        }
+
+        /* Results Screen */
+        .results-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            display: none;
+            width: 100%;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .results-header h2 {
+            color: var(--background-dark);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--background-dark);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem auto;
+            border: 6px solid var(--primary-color);
+        }
+
+        .score-circle .num {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .score-circle .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--background-light);
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .stat-card.correct .value { color: var(--accent-green); }
+        .stat-card.incorrect .value { color: var(--primary-color); }
+        .stat-card.unanswered .value { color: #64748b; }
+
+        .review-section {
+            margin-top: 2rem;
+        }
+
+        .review-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--background-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--background-dark);
+        }
+
+        .review-item {
+            background-color: var(--background-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--border-color);
+        }
+
+        .review-item.correct { border-left-color: var(--accent-green); }
+        .review-item.incorrect { border-left-color: var(--primary-color); }
+
+        .review-q {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .review-ans {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-explanation {
+            font-size: 0.9rem;
+            color: #475569;
+            background-color: white;
+            padding: 0.75rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-container { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; top: 0; border-right: none; border-bottom: 1px solid var(--border-color); }
+            .content-area { padding: 1rem; }
+            .results-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-700 min-h-screen flex flex-col">
-  <!-- ── HEADER ── -->
-  <header class="sticky top-0 z-50 bg-slate-900 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-3">
-        <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal-500 text-slate-900 font-bold text-lg select-none">✏️</span>
-        <span class="text-white font-display text-lg leading-tight">Free<span class="text-teal-400">Exam</span>Prep</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
-        <a href="/" class="hover:text-teal-400 transition-colors">Home</a>
-        <a href="design-architecture-hub" class="hover:text-teal-400 transition-colors">Exam Repository</a>
-        <a href="design-architecture-hub#mock-tests" class="hover:text-teal-400 transition-colors">Mock Tests</a>
-        <a href="design-architecture-hub#pyq-papers" class="hover:text-teal-400 transition-colors">PYQ Papers</a>
-        <a href="blog" class="hover:text-teal-400 transition-colors">Blog</a>
-      </nav>
-      <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-teal-300 bg-teal-900/50 border border-teal-700 rounded-full px-3 py-1">✓ 100% Free</span>
-      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+<body>
+
+    <header>
+        <h1>MITID DAT Mock Test Simulator</h1>
+        <div class="timer-container">
+            Time Remaining: <span id="time-display">120:00</span>
+        </div>
+    </header>
+
+    <div class="main-container" id="exam-view">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <h2>Question Grid</h2>
+            <div class="grid-container" id="nav-grid">
+                <!-- Dynamically generated elements -->
+            </div>
+            <div style="margin-top: auto;">
+                <button class="btn-submit" onclick="submitExam()">Finish & Submit Exam</button>
+            </div>
+        </div>
+
+        <!-- Question View Area -->
+        <div class="content-area">
+            <div id="questions-wrapper">
+                <!-- Injected dynamically -->
+            </div>
+            
+            <div class="controls-row">
+                <button class="btn-secondary" id="btn-prev" onclick="navigateQuestion(-1)">Previous</button>
+                <button class="btn-flag" id="btn-flag" onclick="flagQuestion()">Flag for Review</button>
+                <button class="btn-primary" id="btn-next" onclick="navigateQuestion(1)">Next</button>
+            </div>
+        </div>
     </div>
-  </header>
-<!-- ── MOBILE MENU ── -->
-<div id="mobile-menu" class="hidden bg-slate-800 border-t border-slate-700 md:hidden">
-  <nav class="flex flex-col px-4 py-3 gap-1 text-sm font-semibold text-slate-300">
-    <a href="/" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Home</a>
-    <a href="design-architecture-hub" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Exam Repository</a>
-    <a href="design-architecture-hub#mock-tests" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Mock Tests</a>
-    <a href="design-architecture-hub#pyq-papers" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">PYQ Papers</a>
-    <a href="blog" class="px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-teal-400 transition-colors">Blog</a>
-  </nav>
-</div>
-<script>
-  (function(){
-    var btn = document.getElementById('mobile-menu-btn');
-    var menu = document.getElementById('mobile-menu');
-    if(btn && menu){
-      btn.addEventListener('click', function(){
-        var nowOpen = menu.classList.toggle('hidden') === false;
-        btn.setAttribute('aria-expanded', String(nowOpen));
-      });
-      menu.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          menu.classList.add('hidden');
-          btn.setAttribute('aria-expanded','false');
+
+    <!-- Exam Results Interface -->
+    <div class="results-container" id="results-view">
+        <div class="results-header">
+            <h2>Performance Evaluation Report</h2>
+            <p>Phase 1 - Design Aptitude Test Analysis</p>
+            <div class="score-circle">
+                <div class="num" id="res-score">0</div>
+                <div class="label">Total Score</div>
+            </div>
+        </div>
+
+        <div class="results-grid">
+            <div class="stat-card correct">
+                <div class="value" id="res-correct">0</div>
+                <div class="label">Correct Answers</div>
+            </div>
+            <div class="stat-card incorrect">
+                <div class="value" id="res-incorrect">0</div>
+                <div class="label">Incorrect Answers</div>
+            </div>
+            <div class="stat-card unanswered">
+                <div class="value" id="res-unanswered">0</div>
+                <div class="label">Unanswered Questions</div>
+            </div>
+        </div>
+
+        <div class="review-section">
+            <h3 class="review-title">Complete Question Review</h3>
+            <div id="review-wrapper">
+                <!-- Detailed reviews generated dynamically -->
+            </div>
+        </div>
+    </div>
+
+
+  
+    <script>
+        // Exact 50-Question Bank matching paper database
+        const mockQuestions = [
+            {
+                id: 1,
+                category: "Visual Communication & Color Theory",
+                text: "What color space model is primarily used for emissive displays and screens such as OLED monitors?",
+                options: ["CMYK", "RGB", "RYB", "Pantone"],
+                answer: 1,
+                explanation: "Digital displays use the additive RGB model to output color using light-emissive red, green, and blue pixels."
+            },
+            {
+                id: 2,
+                category: "Design History & Movements",
+                text: "Which iconic modernist design group was founded in Weimar, Germany in 1919 by Walter Gropius?",
+                options: ["De Stijl", "Art Nouveau", "Bauhaus", "Arts and Crafts"],
+                answer: 2,
+                explanation: "The Bauhaus was founded by Walter Gropius and became a cornerstone of modern architecture and industrial design."
+            },
+            {
+                id: 3,
+                category: "Indian Crafts & Heritage",
+                text: "Pithora ritualistic paintings are traditionally practiced by tribal communities in which state?",
+                options: ["Rajasthan", "West Bengal", "Gujarat", "Odisha"],
+                answer: 2,
+                explanation: "Pithora paintings are ritual painting styles native to Gujarat and parts of Madhya Pradesh."
+            },
+            {
+                id: 4,
+                category: "Visual Communication & Color Theory",
+                text: "Which of the following colors does NOT appear in the current corporate logo of Google?",
+                options: ["Yellow", "Green", "Purple", "Red"],
+                answer: 2,
+                explanation: "Google's logo is composed of blue, red, yellow, and green. Purple is excluded."
+            },
+            {
+                id: 5,
+                category: "Spatial Reasoning",
+                text: "A standard cube painted fully green is cut into 27 identical smaller cubes. How many small cubes have exactly 2 faces painted green?",
+                options: ["6", "8", "12", "18"],
+                answer: 2,
+                explanation: "Cubes with exactly 2 faces painted are found on the edges of the larger cube. Since a cube has 12 edges, the count is 12."
+            },
+            {
+                id: 6,
+                category: "Logical Thinking",
+                text: "In a coded language, 'DESIGN' is written as 'EFTJHO'. What is the representation of the word 'SKETCH'?",
+                options: ["TLFUDI", "TLGVDI", "TMFUEI", "SLFUCI"],
+                answer: 0,
+                explanation: "The letters shift one position forward in alphabetical sequence ($S\\rightarrow T, K\\rightarrow L, E\\rightarrow F$, etc.)."
+            },
+            {
+                id: 7,
+                category: "Scientific & Mathematical Analysis",
+                text: "What is the volumetric capacity of a cylindrical water tank with a radius of 2 m and height of 7 m? (Use pi = 22/7)",
+                options: ["44 cubic meters", "88 cubic meters", "154 cubic meters", "308 cubic meters"],
+                answer: 1,
+                explanation: "Using volume formula $V = \\pi r^2 h$: $\\frac{22}{7} \\times 4 \\times 7 = 88 \\text{ m}^3$."
+            },
+            {
+                id: 8,
+                category: "Scientific & Mathematical Analysis",
+                text: "If sunlight is focused to a point using a biconvex lens, what is that point called?",
+                options: ["Double Focus", "Optical Center", "Principal Focus", "Aperture Center"],
+                answer: 2,
+                explanation: "Parallel light rays focused by a convex lens meet at the principal focus."
+            },
+            {
+                id: 9,
+                category: "Visual Communication & Color Theory",
+                text: "What animal represents the iconic logo of the World Wide Fund for Nature (WWF)?",
+                options: ["Bald Eagle", "Giant Panda", "Siberian Tiger", "Grey Wolf"],
+                answer: 1,
+                explanation: "The WWF logo features a simplified vector icon of a giant panda."
+            },
+            {
+                id: 10,
+                category: "Visual Communication & Color Theory",
+                text: "What is the term for three colors located directly next to each other on the color wheel?",
+                options: ["Complementary", "Analogous", "Triadic", "Monochromatic"],
+                answer: 1,
+                explanation: "Analogous colors are next to each other on the color wheel."
+            },
+            {
+                id: 11,
+                category: "Spatial Reasoning",
+                text: "What is the mathematical sum of the values on directly opposite faces of a standard six-sided die?",
+                options: ["6", "7", "8", "9"],
+                answer: 1,
+                explanation: "In standard dice, the sum of opposite faces is always exactly 7."
+            },
+            {
+                id: 12,
+                category: "Scientific & Mathematical Analysis",
+                text: "Gear A (12 teeth) rotates clockwise at 120 RPM. If meshed with Gear B (36 teeth), what is Gear B's movement?",
+                options: ["360 RPM, Clockwise", "40 RPM, Counter-Clockwise", "40 RPM, Clockwise", "360 RPM, Counter-Clockwise"],
+                answer: 1,
+                explanation: "Opposite rotation direction, speed calculated inversely to teeth ratio ($120 \\times \\frac{12}{36} = 40$)."
+            },
+            {
+                id: 13,
+                category: "Logical Thinking",
+                text: "Complete the sequence: 3, 8, 15, 24, ?, 48.",
+                options: ["31", "33", "35", "37"],
+                answer: 2,
+                explanation: "The difference between steps increases by consecutive odd numbers: $+5, +7, +9, +11$, hence $24 + 11 = 35$."
+            },
+            {
+                id: 14,
+                category: "Human Factors & Ergonomics",
+                text: "Lumbar support height and seating angles in desk chairs are based on which science?",
+                options: ["Ergonomics / Anthropometrics", "Anisotropic Mechanics", "Material Kinetics", "Thermodynamics"],
+                answer: 0,
+                explanation: "Ergonomics and anthropometrics study human body measurements and movement to improve products."
+            },
+            {
+                id: 15,
+                category: "Visual Communication & Color Theory",
+                text: "What is the traditional Japanese art of paper folding used by designers to study structural forms?",
+                options: ["Kirigami", "Origami", "Ikebana", "Ukiyo-e"],
+                answer: 1,
+                explanation: "Origami is the Japanese art of paper folding."
+            },
+            {
+                id: 16,
+                category: "Visual Communication & Color Theory",
+                text: "Which typography class has small decorative feet at the end of character strokes?",
+                options: ["Serif", "Sans-Serif", "Slab-Serif", "Decorative Script"],
+                answer: 0,
+                explanation: "Serifs are the small projections at the ends of letter strokes."
+            },
+            {
+                id: 17,
+                category: "Scientific & Mathematical Analysis",
+                text: "Why is a double-pane glass window with an air vacuum gap more thermally efficient?",
+                options: ["It transmits more natural light", "The vacuum gap acts as an insulator that limits thermal conduction", "It refracts UV rays away", "It increases static weight"],
+                answer: 1,
+                explanation: "Double-pane glass with an evacuated air gap acts as an effective thermal insulator."
+            },
+            {
+                id: 18,
+                category: "Design History & Movements",
+                text: "Where are the architectural ruins of the historic medieval Vijayanagara Empire located?",
+                options: ["Tanjore", "Belur", "Hampi", "Mandu"],
+                answer: 2,
+                explanation: "Hampi in Karnataka houses the ruins of the medieval Vijayanagara Empire."
+            },
+            {
+                id: 19,
+                category: "Scientific & Mathematical Analysis",
+                text: "Find the fourth proportional to: 8, 12, and 18.",
+                options: ["24", "26", "27", "28"],
+                answer: 2,
+                explanation: "Satisfies the ratio equation: $8/12 = 18/x \\implies x = 27$."
+            },
+            {
+                id: 20,
+                category: "Visual Communication & Color Theory",
+                text: "Which sports apparel brand uses the internationally recognized 'Swoosh' vector emblem?",
+                options: ["Adidas", "Nike", "Reebok", "Puma"],
+                answer: 1,
+                explanation: "The 'Swoosh' is the iconic logo of Nike, designed in 1971."
+            },
+            {
+                id: 21,
+                category: "Spatial Reasoning",
+                text: "How many total cubes are in a 4-layer stack if the bottom has 4, and each layer up has 1 less cube?",
+                options: ["10", "12", "14", "16"],
+                answer: 0,
+                explanation: "Summing consecutive layers: $4 + 3 + 2 + 1 = 10$."
+            },
+            {
+                id: 22,
+                category: "Visual Communication & Color Theory",
+                text: "How is a monochromatic color scheme defined?",
+                options: ["Colors adjacent on the wheel", "Colors opposite on the wheel", "Tints, tones, and shades of a single hue", "Three complementary colors"],
+                answer: 2,
+                explanation: "Monochromatic schemes use variations in lightness and saturation of a single base color."
+            },
+            {
+                id: 23,
+                category: "Indian Crafts & Heritage",
+                text: "What medium is historically used to block dyes in traditional resist-dyed 'Batik' textiles?",
+                options: ["Clay slurry", "Thread bindings", "Beeswax or paraffin", "Starch paste"],
+                answer: 2,
+                explanation: "Batik uses wax resists to block dye from coloring specific areas of the fabric."
+            },
+            {
+                id: 24,
+                category: "Logical Thinking",
+                text: "Identify the lateral horizontal mirror reflection of the word 'DESIGN'.",
+                options: ["ᗡƎƧI∂</", "И∂</IƧƎᗡ", "ᗡƎƧIӘИ", "ᗡEƧIӘN"],
+                answer: 2,
+                explanation: "The correct mirror reflection laterally inverts the letters."
+            },
+            {
+                id: 25,
+                category: "Design History & Movements",
+                text: "Which Apple device designed by Jonathan Ive introduced the click-wheel interface in 2001?",
+                options: ["iPad", "iPhone", "Macintosh", "iPod"],
+                answer: 3,
+                explanation: "The original iPod revolutionized personal media with its click wheel."
+            },
+            {
+                id: 26,
+                category: "Visual Communication & Color Theory",
+                text: "What design principle establishes a visual hierarchy and draws attention to a focal point?",
+                options: ["Proximity", "Rhythm", "Hierarchy", "Alignment"],
+                answer: 2,
+                explanation: "Visual hierarchy guides the viewer's eye in order of importance."
+            },
+            {
+                id: 27,
+                category: "Scientific & Mathematical Analysis",
+                text: "What is the sum of the interior angles of a regular hexagon?",
+                options: ["360 degrees", "540 degrees", "720 degrees", "900 degrees"],
+                answer: 2,
+                explanation: "Calculated using the polygon formula: $(6-2) \\times 180 = 720 \\text{ degrees}$."
+            },
+            {
+                id: 28,
+                category: "Design History & Movements",
+                text: "Which product life-cycle paradigm promotes closed loops of materials to eliminate waste?",
+                options: ["Eco-Efficiency", "Cradle-to-Cradle", "Planned Obsolescence", "Biodegradability"],
+                answer: 1,
+                explanation: "Cradle-to-Cradle design models human industry on natural systems where waste equals food."
+            },
+            {
+                id: 29,
+                category: "Visual Communication & Color Theory",
+                text: "What system condition does an illuminated red oil can icon on an automobile dashboard indicate?",
+                options: ["Low fuel reserve", "Low engine oil pressure", "Coolant system failure", "Tire pressure loss"],
+                answer: 1,
+                explanation: "The oil can icon warns drivers of a critical drop in engine oil pressure."
+            },
+            {
+                id: 30,
+                category: "Scientific & Mathematical Analysis",
+                text: "Which polymer is most commonly used to manufacture clear, single-use beverage bottles?",
+                options: ["PET", "PVC", "PS", "Polypropylene"],
+                answer: 0,
+                explanation: "PET (Polyethylene Terephthalate) is widely recycled and used for bottling liquids."
+            },
+            {
+                id: 31,
+                category: "Logical Thinking",
+                text: "If a clock shows 3:00 and its minute hand points East, in which direction does the hour hand point?",
+                options: ["North", "South", "East", "West"],
+                answer: 1,
+                explanation: "Rotating the minute hand from North to East rotates the hour hand from East to South."
+            },
+            {
+                id: 32,
+                category: "Visual Communication & Color Theory",
+                text: "Adding white to a pure color hue produces a:",
+                options: ["Shade", "Tone", "Tint", "Value"],
+                answer: 2,
+                explanation: "Adding white to a pure color creates a lighter value called a tint."
+            },
+            {
+                id: 33,
+                category: "Visual Communication & Color Theory",
+                text: "What is the negative space around and between design elements called?",
+                options: ["Margin", "White Space", "Bleed", "Kerning"],
+                answer: 1,
+                explanation: "Negative or white space helps structure visual layouts and focus attention."
+            },
+            {
+                id: 34,
+                category: "Design History & Movements",
+                text: "What is the design of materials and systems modeled on biological processes called?",
+                options: ["Organic design", "Biomimicry", "Biogenesis", "Biodesign"],
+                answer: 1,
+                explanation: "Biomimicry studies and emulates nature's forms, processes, and systems."
+            },
+            {
+                id: 35,
+                category: "Logical Thinking",
+                text: "Which of the following drawing tools is the odd one out?",
+                options: ["Brush", "Pencil", "Stylus", "Paper"],
+                answer: 3,
+                explanation: "Brushes, pencils, and styluses are active drawing tools, while paper is the medium."
+            },
+            {
+                id: 36,
+                category: "Visual Communication & Color Theory",
+                text: "What does 'DPI' stand for in visual media and printing systems?",
+                options: ["Dots Per Inch", "Display Pixels Index", "Depth Pixel Image", "Designs Per Inch"],
+                answer: 0,
+                explanation: "DPI (Dots Per Inch) is a metric of print resolution density."
+            },
+            {
+                id: 37,
+                category: "Human Factors & Ergonomics",
+                text: "Which body measurement is used to determine optimal standing work-counter heights?",
+                options: ["Total body height", "Standing elbow height", "Shoulder joint height", "Functional arm reach"],
+                answer: 1,
+                explanation: "Standing elbow height helps determine comfortable countertop levels to avoid fatigue."
+            },
+            {
+                id: 38,
+                category: "Visual Communication & Color Theory",
+                text: "Which institution designed the iconic eye-shaped logo of Doordarshan?",
+                options: ["NID Ahmedabad", "IDC IIT Bombay", "Delhi College of Art", "Sir J.J. School of Art"],
+                answer: 1,
+                explanation: "The Doordarshan logo was designed by Devashis Bhattacharyya at IDC, IIT Bombay."
+            },
+            {
+                id: 39,
+                category: "Spatial Reasoning",
+                text: "What 3D solid is formed when a net of four equilateral triangles is folded?",
+                options: ["Square Pyramid", "Triangular Prism", "Tetrahedron", "Octahedron"],
+                answer: 2,
+                explanation: "A regular tetrahedron is composed of 4 triangular faces."
+            },
+            {
+                id: 40,
+                category: "Visual Communication & Color Theory",
+                text: "Which automotive brand features a three-pointed star inside a circle as its logo?",
+                options: ["BMW", "Audi", "Jaguar", "Mercedes-Benz"],
+                answer: 3,
+                explanation: "The three-pointed star logo belongs to Mercedes-Benz, representing motorization."
+            },
+            {
+                id: 41,
+                category: "Design History & Movements",
+                text: "What decorative design style is characterized by sleek geometric forms and rich finishes, like on the Chrysler Building?",
+                options: ["Art Nouveau", "Arts and Crafts", "Bauhaus", "Art Deco"],
+                answer: 3,
+                explanation: "Art Deco is famous for its bold geometric shapes and metallic ornaments [cite: 10, 43]."
+            },
+            {
+                id: 42,
+                category: "Visual Communication & Color Theory",
+                text: "Why is the CMYK printing system called subtractive?",
+                options: ["It removes pigments during processing", "It subtracts white light reflection from paper", "It reduces screen display resolution", "It cuts down color printing costs"],
+                answer: 1,
+                explanation: "CMYK works by subtracting (absorbing) wavelengths of light reflected from paper."
+            },
+            {
+                id: 43,
+                category: "Spatial Reasoning",
+                text: "If an asymmetrical 3D object is rotated 180 degrees on the Y-axis and then 90 degrees clockwise on the X-axis, it is:",
+                options: ["Upside down and facing left", "Upside down and facing backward", "Right-side up and facing right", "Sideways and facing forward"],
+                answer: 1,
+                explanation: "The combined axes shifts flip the object upside down and turn it backward."
+            },
+            {
+                id: 44,
+                category: "Visual Communication & Color Theory",
+                text: "Which color is most associated with safety, cleanliness, and minimalism?",
+                options: ["Yellow", "White", "Black", "Green"],
+                answer: 1,
+                explanation: "White is associated with cleanliness, hygiene, simplicity, and minimalism."
+            },
+            {
+                id: 45,
+                category: "Visual Communication & Color Theory",
+                text: "What is adjusting the spacing between a specific pair of letters called?",
+                options: ["Tracking", "Leading", "Kerning", "Justification"],
+                answer: 2,
+                explanation: "Kerning is the adjustment of spacing between individual pairs of characters."
+            },
+            {
+                id: 46,
+                category: "Design History & Movements",
+                text: "Termite mound self-cooling inspired what type of passive building design?",
+                options: ["Trombe Passive Heat Walls", "Biomimetic active ventilation", "Rotational ventilation systems", "Solar chimney orientation"],
+                answer: 1,
+                explanation: "TERMINAL structures like the Eastgate Centre mimic termite mounds to regulate temperature."
+            },
+            {
+                id: 47,
+                category: "Scientific & Mathematical Analysis",
+                text: "What type of physical mixture is milk?",
+                options: ["Homogeneous solution", "Heterogeneous colloid emulsion", "Compound solution", "Pure fluid state"],
+                answer: 1,
+                explanation: "Milk is a heterogeneous colloid emulsion of fat globules suspended in an aqueous solution."
+            },
+            {
+                id: 48,
+                category: "Visual Communication & Color Theory",
+                text: "Which vector file format is used for scale-independent web graphics?",
+                options: ["JPEG", "PNG", "SVG", "TIFF"],
+                answer: 2,
+                explanation: "SVGs (Scalable Vector Graphics) use math to describe shapes, allowing infinite scaling without pixelation [cite: 38]."
+            },
+            {
+                id: 49,
+                category: "Human Factors & Ergonomics",
+                text: "What body measurement is used to determine optimal seat depth in public seating?",
+                options: ["Buttock-popliteal length", "Standing height", "Shoulder joint height", "Hip breadth"],
+                answer: 0,
+                explanation: "Buttock-popliteal length determines seat depth to provide comfortable thigh support."
+            },
+            {
+                id: 50,
+                category: "Design History & Movements",
+                text: "Which late 19th-century movement valued hand-craftsmanship over industrial mass production?",
+                options: ["Arts and Crafts", "Modernism", "De Stijl", "Bauhaus"],
+                answer: 0,
+                explanation: "The Arts and Crafts movement championed traditional hand-craftsmanship over factory output."
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        const userAnswers = {};
+        const flaggedQuestions = new Set();
+        let examTimeRemaining = 120 * 60; // 120 minutes
+        let countdownTimer;
+
+        // Initialize exam page
+        window.addEventListener('DOMContentLoaded', () => {
+            renderQuestionCards();
+            renderNavigationGrid();
+            startTimer();
+            showQuestion(0);
         });
-      });
-    }
-  })();
-</script>
 
-  <div class="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-sm">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2 text-sm">
-      <h1 class="font-bold text-slate-900">MITID DAT Design Aptitude — Interactive Mock Test</h1>
-      <p class="text-slate-500 font-medium">⏳ 45 Minutes • 50 Marks • 2 Sample MCQs</p>
-    </div>
-  </div>
+        function startTimer() {
+            countdownTimer = setInterval(() => {
+                if (examTimeRemaining <= 0) {
+                    clearInterval(countdownTimer);
+                    alert("Time has expired. Submitting your exam automatically.");
+                    submitExam();
+                    return;
+                }
+                examTimeRemaining--;
+                updateTimerDisplay();
+            }, 1000);
+        }
 
-  <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8 space-y-6">
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q1">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 1</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">In MITID DAT Design Aptitude, which practice strategy improves score reliability the most in limited time?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Memorize only final answers from previous papers</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Solve topic-wise timed sets and analyze mistakes immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip revision and attempt full mocks only</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q1" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt random questions without tracking weak areas</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Build a timed routine close to real exam pressure.</p>
-          <p><strong>Step 2:</strong> Mark conceptual and silly errors separately.</p>
-          <p><strong>Step 3:</strong> Revise weak topics and reattempt wrong questions.</p>
-          <p><strong>Correct Option:</strong> Solve topic-wise timed sets and analyze mistakes immediately.</p>
-        </div>
-      </details>
-    </section>
+        function updateTimerDisplay() {
+            const minutes = Math.floor(examTimeRemaining / 60);
+            const seconds = examTimeRemaining % 60;
+            document.getElementById('time-display').innerText = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
 
-    <section class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" id="q2">
-      <div class="flex items-center justify-between mb-3">
-        <span class="text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Question 2</span>
-        <span class="text-xs text-slate-400">+2 / -0.5</span>
-      </div>
-      <h2 class="text-base font-semibold text-slate-900 mb-4">For MITID DAT Design Aptitude, what is the best order during a timed mock to maximize accuracy and completion?</h2>
-      <div class="space-y-3 mb-4">
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Start with the hardest section and stay there till completion</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Attempt medium and easy questions first, then return to complex ones</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Leave no time for review and submit immediately</span></label>
-        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 bg-slate-50"><input type="radio" name="q2" class="text-teal-600 focus:ring-teal-500"> <span class="text-sm">Skip instructions and guess unanswered questions</span></label>
-      </div>
-      <details class="border border-teal-200 rounded-xl overflow-hidden">
-        <summary class="cursor-pointer bg-teal-50 text-teal-700 font-semibold text-sm px-4 py-3">💡 View Step-by-Step Solution</summary>
-        <div class="px-4 py-4 text-sm text-slate-600 border-t border-teal-100 bg-white space-y-2">
-          <p><strong>Step 1:</strong> Secure easy and medium questions quickly for stable score accumulation.</p>
-          <p><strong>Step 2:</strong> Reserve remaining time for difficult or calculation-heavy items.</p>
-          <p><strong>Step 3:</strong> Keep 3-5 minutes for review of marked questions.</p>
-          <p><strong>Correct Option:</strong> Attempt medium and easy questions first, then return to complex ones.</p>
-        </div>
-      </details>
-    </section>
+        function renderQuestionCards() {
+            const container = document.getElementById('questions-wrapper');
+            container.innerHTML = '';
+            
+            mockQuestions.forEach((q, idx) => {
+                const card = document.createElement('div');
+                card.className = `question-card ${idx === 0 ? 'active' : ''}`;
+                card.id = `q-card-${idx}`;
+                
+                let optionsHTML = '';
+                q.options.forEach((opt, optIdx) => {
+                    optionsHTML += `
+                        <label class="option-label" id="opt-label-${idx}-${optIdx}">
+                            <input type="radio" name="question-${idx}" value="${optIdx}" onclick="selectOption(${idx}, ${optIdx})">
+                            ${String.fromCharCode(65 + optIdx)}) ${opt}
+                        </label>
+                    `;
+                });
 
-    <div class="text-center">
-      <a href="mitid-dat-design-aptitude-pyq" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">Review 10-Year PYQs</a>
-    </div>
-  </main>
+                card.innerHTML = `
+                    <div class="category-badge">${q.category}</div>
+                    <div class="question-meta">Question ${idx + 1} of ${mockQuestions.length}</div>
+                    <div class="question-text">${q.text}</div>
+                    <div class="options-container">${optionsHTML}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
 
-  <!-- ── FOOTER ── -->
+        function renderNavigationGrid() {
+            const grid = document.getElementById('nav-grid');
+            grid.innerHTML = '';
+            mockQuestions.forEach((_, idx) => {
+                const item = document.createElement('div');
+                item.className = 'grid-item';
+                item.id = `grid-item-${idx}`;
+                item.innerText = idx + 1;
+                item.onclick = () => showQuestion(idx);
+                grid.appendChild(item);
+            });
+        }
+
+        function showQuestion(idx) {
+            document.getElementById(`q-card-${currentQuestionIdx}`).classList.remove('active');
+            document.getElementById(`grid-item-${currentQuestionIdx}`).classList.remove('active');
+            
+            currentQuestionIdx = idx;
+            
+            document.getElementById(`q-card-${currentQuestionIdx}`).classList.add('active');
+            document.getElementById(`grid-item-${currentQuestionIdx}`).classList.add('active');
+            
+            document.getElementById('btn-prev').style.visibility = idx === 0 ? 'hidden' : 'visible';
+            document.getElementById('btn-next').innerText = idx === mockQuestions.length - 1 ? 'Finish' : 'Next';
+        }
+
+        function navigateQuestion(direction) {
+            const nextIdx = currentQuestionIdx + direction;
+            if (nextIdx >= 0 && nextIdx < mockQuestions.length) {
+                showQuestion(nextIdx);
+            } else if (nextIdx === mockQuestions.length) {
+                if (confirm("Are you sure you want to finish the exam and view your score?")) {
+                    submitExam();
+                }
+            }
+        }
+
+        function selectOption(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            
+            const options = document.getElementsByName(`question-${qIdx}`);
+            options.forEach((_, idx) => {
+                const label = document.getElementById(`opt-label-${qIdx}-${idx}`);
+                if (idx === optIdx) {
+                    label.classList.add('selected');
+                } else {
+                    label.classList.remove('selected');
+                }
+            });
+
+            const gridItem = document.getElementById(`grid-item-${qIdx}`);
+            gridItem.classList.add('answered');
+            gridItem.classList.remove('flagged');
+            flaggedQuestions.delete(qIdx);
+        }
+
+        function flagQuestion() {
+            const gridItem = document.getElementById(`grid-item-${currentQuestionIdx}`);
+            if (flaggedQuestions.has(currentQuestionIdx)) {
+                flaggedQuestions.delete(currentQuestionIdx);
+                gridItem.classList.remove('flagged');
+                if (userAnswers[currentQuestionIdx] !== undefined) {
+                    gridItem.classList.add('answered');
+                }
+            } else {
+                flaggedQuestions.add(currentQuestionIdx);
+                gridItem.classList.add('flagged');
+                gridItem.classList.remove('answered');
+            }
+        }
+
+        function submitExam() {
+            clearInterval(countdownTimer);
+            document.getElementById('exam-view').style.display = 'none';
+            document.getElementById('results-view').style.display = 'block';
+            
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unansweredCount = 0;
+            
+            const reviewWrapper = document.getElementById('review-wrapper');
+            reviewWrapper.innerHTML = '';
+
+            mockQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.answer;
+                
+                if (userAns === undefined) {
+                    unansweredCount++;
+                } else if (isCorrect) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                }
+
+                const reviewCard = document.createElement('div');
+                reviewCard.className = `review-item ${userAns === undefined ? '' : (isCorrect ? 'correct' : 'incorrect')}`;
+                
+                reviewCard.innerHTML = `
+                    <div class="category-badge">${q.category}</div>
+                    <div class="review-q">${idx + 1}. ${q.text}</div>
+                    <div class="review-ans"><strong>Your Answer:</strong> ${userAns !== undefined ? q.options[userAns] : '<span style="color:#ef4444;">Unanswered</span>'}</div>
+                    <div class="review-ans"><strong>Correct Answer:</strong> <span style="color:#10b981; font-weight:bold;">${q.options[q.answer]}</span></div>
+                    <div class="review-explanation">${q.explanation}</div>
+                `;
+                reviewWrapper.appendChild(reviewCard);
+            });
+
+            document.getElementById('res-score').innerText = `${correctCount}/${mockQuestions.length}`;
+            document.getElementById('res-correct').innerText = correctCount;
+            document.getElementById('res-incorrect').innerText = incorrectCount;
+            document.getElementById('res-unanswered').innerText = unansweredCount;
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+<!-- ── FOOTER ── -->
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-10">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
       <div>
@@ -146,5 +1086,6 @@
       </div>
     </div>
   </footer>
+  
 </body>
 </html>
